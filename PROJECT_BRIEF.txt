@@ -1,0 +1,83 @@
+ANIMAS RIVER AFTER GOLD KING
+Did the 2015 Gold King Mine release leave a lasting, flow-adjusted signal?
+Project brief for an autonomous implementation agent
+
+Build Animas Gold King in this project directory (/Users/ethannol/src/side-projects/animas-gold-king). This brief is self-contained. Make routine implementation decisions and carry the project through data acquisition, analysis, testing, and a finished report. Keep it small enough to explain in a five-minute interview.
+
+PURPOSE
+
+Ethan Levy is pursuing a data science role at a minerals company. His background includes geology/physics/mathematics, a master's in hydrology and water quality, environmental data work, production fraud-detection ML, and work since January 2025 as the founding engineer at a three-person AI startup. His portfolio has a reference groundwater analysis with an LLM evaluation, a verification harness for analysis agents (cairn), two statistics cheat sheets, and (in progress alongside this) a mineral prospectivity model. This project is the mine-water piece: an interrupted time series on a well-known event where the obvious answer is probably wrong.
+
+The event: on 5 August 2015 an EPA-contracted crew breached the Gold King Mine adit near Silverton, Colorado, releasing about three million gallons of acidic, metal-laden water into Cement Creek, which flows into the Animas River and on to the San Juan. The plume passed within days. The central question is not whether the plume happened; it is: after adjusting for discharge and season, did metal concentrations in Cement Creek and the Animas River change in a lasting way after August 2015, and can any change be attributed to the release rather than to what came after it?
+
+Do not decide the answer in advance. Plausible findings include: no lasting change; a decrease because the interim water treatment plant at Gladstone began treating Gold King discharge in autumn 2015; a change that depends entirely on which pre-period is chosen; or a change that is only detectable in some constituents at some sites. Any of these is a valid result. The portfolio's value is in exposing how the answer depends on the choices and in making those choices explicit.
+
+KNOWN CONFOUNDERS TO EXPOSE, NOT ASSUME
+
+Verify each against published sources before relying on it, and cite what you find in docs/decisions.md:
+
+- The Gladstone interim water treatment plant began operating in October 2015 and treats Gold King discharge before it reaches Cement Creek.
+- Bulkheads installed in the Sunnyside Mine workings and the American Tunnel between about 1996 and 2003 are associated with rising metal loads in Cement Creek through the 2000s, so the pre-period may contain a trend.
+- The Bonita Peak Mining District was listed as a Superfund site in 2016, with other source-control work since.
+- Sampling intensity rose sharply after the release, and detection limits, methods and sampling organisations changed with it. More samples at lower limits is not a concentration change.
+- Spring snowmelt flushes stored metals; the plume itself was a few days. "Lasting" must be defined on a scale of months to years and the plume-passage window handled explicitly.
+
+DATA
+
+Public USGS and partner data. Verify every endpoint before use; USGS has been migrating water services during 2025 and 2026 and legacy endpoints may be retired. Record what was tried and what worked.
+
+Water quality: Water Quality Portal (https://www.waterqualitydata.us/webservices_documentation/) for USGS NWIS and STORET/WQX records. The sibling project /Users/ethannol/src/side-projects/groundwater-audit has a working, checksummed WQP acquisition module (src/gwaudit/acquire.py) and a field dictionary; reuse the approach and the dictionary rather than rewriting them. Note which result profile returns complete records for the period.
+
+Candidate sites, to be confirmed against the portal: USGS 09358550 Cement Creek at Silverton; USGS 09358000 Animas River at Silverton (upstream of the Cement Creek confluence, a control); USGS 09359020 Animas River below Silverton; USGS 09361500 Animas River at Durango; USGS 09363500 Animas River near Cedar Hill, New Mexico. Include others if coverage requires it. Record each site's role (impacted, control, downstream).
+
+Constituents: dissolved and total zinc, copper, lead, cadmium, iron, manganese, aluminium and arsenic, plus pH and specific conductance where available. Keep dissolved and total separate; they answer different questions.
+
+Discharge: daily mean discharge for the same gauges from the current USGS water data API (check https://api.waterdata.usgs.gov and the legacy https://waterservices.usgs.gov; use whichever works and record it). Instantaneous discharge recorded with the sample, where the portal provides it, is preferable for concentration-discharge work.
+
+Period: at least 2005 to the latest available, so the pre-period is long enough to show its own trend.
+
+Record for every download: URL and query, date, HTTP headers, SHA-256, row counts. Keep the raw snapshot unchanged and commit it if it is public-domain USGS data of modest size; otherwise commit a downloader and a compact fixture. Preserve site, date, time, constituent, fraction, unit, method, detection qualifier, reporting limit, QC sample type, and organisation. Build an exclusion log for every cleaning decision.
+
+MINIMUM ANALYSIS
+
+Pre-register (see cairn below) the sites, constituents, periods, model forms and decision rule before fitting.
+
+1. Coverage: samples per site, constituent and year; organisations; detection limits over time; QC records; gaps. One figure.
+2. Comparability: separate dissolved from total; reconcile units; identify the different reporting limits and method changes; do not combine incompatible definitions.
+3. Concentration-discharge relationship per site and constituent: log concentration against log discharge with seasonal harmonics, fitted on the pre-period, producing flow-adjusted residuals. Show the C-Q plot pre and post for the headline cases.
+4. Interrupted time series on the flow-adjusted series with a level change and a slope change at the release date, excluding a stated plume-passage window. Fit with the uncertainty structure the data have (autocorrelated residuals; use Newey-West or a simple AR(1) adjustment and say so). Treat non-detects as censored: a left-censored regression (Tobit-style) or a transparent bounds analysis, with substitution only as a labelled sensitivity check.
+5. Sensitivity: vary the pre-period start (for example 2005, 2010, 2013), the post-period end, and the plume window; show the estimated level change under each. This grid is the headline figure.
+6. A change-point search on the flow-adjusted residuals that does not know the release date (binary segmentation or PELT on the monthly series). Report where the detected change-points fall relative to the release and to the treatment-plant start. If the strongest change-point sits at the treatment plant, say so.
+7. Use the upstream control site as a difference-in-differences style check for the sites that have one.
+8. Multiplicity: several sites times several constituents. State how many comparisons were made and report accordingly; do not cherry-pick the one significant cell.
+
+Report uncertainty appropriate to a seasonal, autocorrelated, unevenly sampled series. Avoid precision the data do not support. Describe change in measured concentrations; do not infer a health, ecological, or legal conclusion.
+
+BUILD THE PROJECT ON CAIRN
+
+Ethan's harness cairn lives at /Users/ethannol/src/side-projects/cairn (git repository; MIT). Use it: add it as a dependency installed from that path for local work and record the cairn commit hash in the README so a fresh checkout can pin it. Run `cairn init .` in this directory, fill `docs/prereg.md` (question, sites and roles, constituents, periods, plume window, model forms, censoring treatment, decision rule), and run `cairn freeze` BEFORE fitting. Write one `scripts/NN_name.py` per step. Record every reported number with `cairn.record` and write the report as `report.tmpl.md` with `{{key}}` placeholders rendered by `cairn render`. Use `cairn.checked_merge` for joins and `cairn.censored_values` where it applies. `cairn verify` must pass at the end, including the clean rerun. If any part of cairn blocks reasonable progress, work around it, do not edit cairn, and record what blocked in docs/decisions.md. Read cairn's README, template CLAUDE.md and the analysis-workflow skill first. Anything decided after the freeze is exploratory and must be labelled so.
+
+TESTS
+
+Focused pytest tests: the C-Q regression recovers known slope and seasonal amplitude from a synthetic series; the interrupted time series recovers a planted level change and reports no change on a null series; censored regression on a fixture with known censoring; unit reconciliation; the join of samples to discharge does not multiply rows and handles missing days; the plume-window exclusion removes exactly the intended rows; the change-point search finds a planted step and nothing on white noise.
+
+DELIVERABLES
+
+- README: question, setup, commands, data provenance, main findings with the headline numbers and figure, what is not claimed, how AI was used (one honest paragraph: built in a Claude Code session with Claude Fable 5.1 from this brief; the author reviewed the pre-registration, the tests and the findings).
+- src/ package (uv, hatchling, Python 3.12, pinned via uv.lock): acquire, prepare, cq (concentration-discharge), its (interrupted time series), censored, changepoint, report; scripts/ pipeline under cairn.
+- reports/: report.md rendered from the ledger; figures (coverage; detection limits over time; time series with discharge for the headline site and constituent; C-Q pre/post; ITS fit with counterfactual; the sensitivity grid; change-point locations); tables.
+- docs/: decisions.md (every data and modelling decision, the verified confounder timeline with sources, endpoint history), prereg.md (frozen), walkthrough.md (five-minute script, every number from the ledger), resume_bullet.md (measured results only).
+
+Everything deterministic must run from a fresh checkout without network access given the committed snapshot. Seed everything.
+
+WORKING RULES
+
+Work only in this project directory, reading the groundwater-audit and cairn directories only as references. Do not read or modify any employer systems or data. Do not create a GitHub repository, deploy anything, or contact anyone. Initialise a git repository here with local config user.name "Ethan Levy" and user.email "ethannol@gmail.com", branch main, a .gitignore that excludes .venv and caches, and commit in a few sensible steps as the work lands. End every commit message with the line: Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>. Do not put any other name on anything.
+
+Machine restrictions on this MacBook: do not launch Chrome, Chromium, Playwright, browser rendering, screenshots, or dev servers. Figures written directly by Matplotlib are fine. Keep compute modest. Do not detach background jobs. No LLM calls are needed for this project. Use `python -I` when first inspecting downloaded files.
+
+COMPLETION STANDARD
+
+A bounded, honest study: a pre-registered protocol frozen before fitting, a reproducible snapshot, a flow-adjusted interrupted time series with a sensitivity grid, a blind change-point check, the confounder timeline documented with sources, and limitations attached to the claims they affect. A reader should be able to follow each headline number from the snapshot through a script to the ledger to the report.
+
+Proceed autonomously on routine choices. Finish with: the runnable commands, where the artifacts are, the actual headline result and how it depends on the pre-period choice, where the blind change-points fell, which endpoints worked, anything in cairn that blocked and how you worked around it, and anything left unfinished, stated narrowly.

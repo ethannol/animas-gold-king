@@ -1,0 +1,66 @@
+{
+  "purpose": "Reproducible query specification for the Animas Gold King snapshot. Every file in data/raw/ was produced from this file by scripts/download.py (src/animas/acquire.py); the manifest records URLs, dates, headers, checksums and row counts.",
+  "wqp": {
+    "source": "Water Quality Portal (USGS NWIS + EPA WQX/STORET), legacy WQX 2.x web services",
+    "base_url": "https://www.waterqualitydata.us",
+    "endpoints": {"result": "/data/Result/search", "station": "/data/Station/search"},
+    "result_profile": "resultPhysChem",
+    "params": {
+      "characteristicName": [
+        "Zinc", "Copper", "Lead", "Cadmium", "Iron", "Manganese", "Aluminum", "Arsenic",
+        "pH", "Specific conductance",
+        "Flow", "Stream flow, instantaneous", "Flow rate, instantaneous"
+      ],
+      "startDateLo": "01-01-2005",
+      "mimeType": "csv",
+      "zip": "no"
+    }
+  },
+  "usgs_daily": {
+    "source": "USGS Water Data API (OGC API - Features), daily values collection",
+    "base_url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/daily/items",
+    "params": {"parameter_code": "00060", "statistic_id": "00003", "datetime": "2005-01-01/2026-10-09", "limit": 10000, "f": "csv"},
+    "gauges": ["USGS-09358550", "USGS-09358000", "USGS-09359020", "USGS-09361500", "USGS-09363500"]
+  },
+  "reaches": {
+    "cement_creek": {
+      "label": "Cement Creek at Silverton",
+      "role": "impacted",
+      "gauge": "USGS-09358550",
+      "sites": ["USGS-09358550", "CORIVWCH_WQX-323", "ARSG-CC48", "USEPA_REGION8-CC48", "BPMWQX-205-CC48",
+                "21COL001-CEM48", "21COL001_WQX-CEM49", "21COL001-CEM49", "USGS-374854107393900"]
+    },
+    "animas_above_cement": {
+      "label": "Animas River at Silverton, above Cement Creek",
+      "role": "control",
+      "gauge": "USGS-09358000",
+      "sites": ["USGS-09358000", "CORIVWCH_WQX-103", "CORIVWCH_WQX-3449", "ARSG-A68", "USEPA_REGION8-A68",
+                "BPMWQX-124-A68", "BPMWQX-5384-AN-A68", "21COL001_WQX-9488"]
+    },
+    "animas_below_silverton": {
+      "label": "Animas River below Silverton (A72)",
+      "role": "impacted",
+      "gauge": "USGS-09359020",
+      "sites": ["USGS-09359020", "CORIVWCH_WQX-3611", "CORIVWCH_WQX-3448", "ARSG-A72", "USEPA_REGION8-A72",
+                "BPMWQX-129-A72", "21COL001_WQX-AN72", "21COL001-AN72", "21COL001-000082"]
+    },
+    "animas_durango": {
+      "label": "Animas River at Durango",
+      "role": "downstream",
+      "gauge": "USGS-09361500",
+      "sites": ["USGS-09361500", "CORIVWCH_WQX-91", "USEPA_REGION8-Rotary Park", "BPMWQX-2888-Rotary Park",
+                "21COL001_WQX-ROTARY", "USEPA_REGION8-9423A", "21COL001_WQX-9423A", "USEPA_REGION8-GKM05"]
+    },
+    "animas_cedar_hill": {
+      "label": "Animas River near Cedar Hill, New Mexico",
+      "role": "downstream",
+      "gauge": "USGS-09363500",
+      "sites": ["USGS-09363500", "SOUTHUTE-AR 2-7", "USEPA_REGION8-AR2-7", "CORIVWCH_WQX-3427", "CORIVWCH_WQX-3428"]
+    }
+  },
+  "notes": [
+    "Reach membership was chosen from a WQP Station search (bBox=-108.10,36.90,-107.40,37.95, characteristicName=Zinc, startDateLo=01-01-2005) on 2026-10-09: partner stations within roughly 1 km of each USGS gauge on the same stream. 'Storm Opp' (opportunistic storm) stations were left out.",
+    "Both the legacy resultPhysChem profile and the WQX3 fullPhysChem profile were probed; the downloader records the WQX3 row count for the same query in the manifest so the comparison is reproducible.",
+    "Discharge: api.waterdata.usgs.gov (OGC API daily collection, api-version 1.9.8 on 2026-10-09) and the legacy waterservices.usgs.gov/nwis/dv endpoint both answered; the new API is used and the legacy probe result is recorded in the manifest."
+  ]
+}

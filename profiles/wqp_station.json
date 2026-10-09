@@ -1,0 +1,476 @@
+{
+  "name": "wqp_station",
+  "source": "data/raw/wqp_station.csv",
+  "sha256": "638f2edc592abda1efed236f37144133b008ad6f28f3cb47ad10f4c9acd6283e",
+  "rows": 32,
+  "columns": 37,
+  "duplicate_rows": 0,
+  "candidate_keys": [
+    [
+      "MonitoringLocationIdentifier"
+    ]
+  ],
+  "fields": {
+    "OrganizationIdentifier": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 9,
+      "unique_rate": 0.28125,
+      "top_values": {
+        "USEPA_REGION8": 7,
+        "21COL001_WQX": 5,
+        "BPMWQX": 5,
+        "CORIVWCH_WQX": 5,
+        "USGS-CO": 4,
+        "ARSG": 3,
+        "USGS-NM": 1,
+        "21COL001": 1
+      }
+    },
+    "OrganizationFormalName": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 9,
+      "unique_rate": 0.28125,
+      "top_values": {
+        "USEPA Region 8": 7,
+        "Colorado Dept. of Public Health & Environment-WQCD": 5,
+        "Bonita Peak Mining": 5,
+        "Colorado River Watch": 5,
+        "USGS Colorado Water Science Center": 4,
+        "Animas River Stakeholders Group (Colorado) (Volunteer)": 3,
+        "USGS New Mexico Water Science Center": 1,
+        "Colorado Dept. of Public Health & Environment": 1
+      }
+    },
+    "MonitoringLocationIdentifier": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 32,
+      "unique_rate": 1.0,
+      "top_values": {
+        "USGS-09358000": 1,
+        "USGS-09358550": 1,
+        "USGS-09359020": 1,
+        "USGS-09361500": 1,
+        "USGS-09363500": 1,
+        "21COL001-000082": 1,
+        "21COL001_WQX-9423A": 1,
+        "21COL001_WQX-9488": 1
+      }
+    },
+    "MonitoringLocationName": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 28,
+      "unique_rate": 0.875,
+      "top_values": {
+        "A68": 2,
+        "A72": 2,
+        "CC48": 2,
+        "Rotary Park": 2,
+        "ANIMAS RIVER AT SILVERTON, CO.": 1,
+        "CEMENT CREEK AT SILVERTON, CO": 1,
+        "ANIMAS RIVER BELOW SILVERTON, CO": 1,
+        "ANIMAS RIVER AT DURANGO, CO": 1
+      }
+    },
+    "MonitoringLocationTypeName": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 3,
+      "unique_rate": 0.09375,
+      "top_values": {
+        "River/Stream": 22,
+        "Stream": 5,
+        "CERCLA Superfund Site": 5
+      }
+    },
+    "MonitoringLocationDescriptionText": {
+      "dtype": "str",
+      "null_count": 23,
+      "null_rate": 0.71875,
+      "n_unique": 9,
+      "unique_rate": 1.0,
+      "top_values": {
+        "The site is by USGS station 09359020, sometimes referred to as A-72.": 1,
+        "14th Street Gauge @ 13th Street Bridge": 1,
+        "Animas Gauge below Silverton": 1,
+        "Cement Creek upstream from Animas": 1,
+        "Animas River at Silverton, CO, USGS gage 09358000, a.k.a. A68": 1,
+        "From Greene Street (also State Hwy 110) within the town Silverton, turn southeast onto 14th St and proceed to second bridge.": 1,
+        "Traveling north on Greene St (also State Hwy 110) in Silverton turn left at the San Juan County Historical Society Museum (end of town just about), sample upstream of bridge.": 1,
+        "From the junction of Hwy 550/160 in Durango, go north on 550 (Main Ave) until the railroad tracks cross the road.  Turn left at the light between the old powerplant and the RiverFront Building and the Bridge Cafe. Proceed down to the river and sample downstream of the the hanging bridge.": 1
+      }
+    },
+    "HUCEightDigitCode": {
+      "dtype": "int64",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 1,
+      "unique_rate": 0.03125,
+      "numeric": {
+        "min": 14080104.0,
+        "p05": 14080104.0,
+        "median": 14080104.0,
+        "p95": 14080104.0,
+        "max": 14080104.0,
+        "mean": 14080104.0,
+        "zeros": 0,
+        "negatives": 0
+      }
+    },
+    "DrainageAreaMeasure/MeasureValue": {
+      "dtype": "float64",
+      "null_count": 27,
+      "null_rate": 0.84375,
+      "n_unique": 5,
+      "unique_rate": 1.0,
+      "numeric": {
+        "min": 20.1,
+        "p05": 30.200000000000003,
+        "median": 146.0,
+        "p95": 1012.1999999999999,
+        "max": 1090.0,
+        "mean": 405.54,
+        "zeros": 0,
+        "negatives": 0
+      }
+    },
+    "DrainageAreaMeasure/MeasureUnitCode": {
+      "dtype": "str",
+      "null_count": 27,
+      "null_rate": 0.84375,
+      "n_unique": 1,
+      "unique_rate": 0.2,
+      "top_values": {
+        "sq mi": 5
+      }
+    },
+    "ContributingDrainageAreaMeasure/MeasureValue": {
+      "dtype": "float64",
+      "null_count": 32,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "ContributingDrainageAreaMeasure/MeasureUnitCode": {
+      "dtype": "float64",
+      "null_count": 32,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "LatitudeMeasure": {
+      "dtype": "float64",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 31,
+      "unique_rate": 0.96875,
+      "numeric": {
+        "min": 37.03226,
+        "p05": 37.034644592,
+        "median": 37.7901085,
+        "p95": 37.818836665,
+        "max": 37.82,
+        "mean": 37.600497262812496,
+        "zeros": 0,
+        "negatives": 0
+      }
+    },
+    "LongitudeMeasure": {
+      "dtype": "float64",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 31,
+      "unique_rate": 0.96875,
+      "numeric": {
+        "min": -107.885857,
+        "p05": -107.884273,
+        "median": -107.667548,
+        "p95": -107.659021,
+        "max": -107.658381,
+        "mean": -107.737433325,
+        "zeros": 0,
+        "negatives": 32
+      }
+    },
+    "SourceMapScaleNumeric": {
+      "dtype": "float64",
+      "null_count": 15,
+      "null_rate": 0.46875,
+      "n_unique": 4,
+      "unique_rate": 0.235294,
+      "numeric": {
+        "min": 0.0,
+        "p05": 0.0,
+        "median": 24000.0,
+        "p95": 160000.0,
+        "max": 160000.0,
+        "mean": 52723.529411764706,
+        "zeros": 5,
+        "negatives": 0
+      }
+    },
+    "HorizontalAccuracyMeasure/MeasureValue": {
+      "dtype": "float64",
+      "null_count": 27,
+      "null_rate": 0.84375,
+      "n_unique": 2,
+      "unique_rate": 0.4,
+      "numeric": {
+        "min": 1.0,
+        "p05": 1.0,
+        "median": 5.0,
+        "p95": 5.0,
+        "max": 5.0,
+        "mean": 3.4,
+        "zeros": 0,
+        "negatives": 0
+      }
+    },
+    "HorizontalAccuracyMeasure/MeasureUnitCode": {
+      "dtype": "str",
+      "null_count": 27,
+      "null_rate": 0.84375,
+      "n_unique": 1,
+      "unique_rate": 0.2,
+      "top_values": {
+        "seconds": 5
+      }
+    },
+    "HorizontalCollectionMethodName": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 7,
+      "unique_rate": 0.21875,
+      "top_values": {
+        "Interpolation-Map": 8,
+        "GPS-Unspecified": 8,
+        "GPS Code (Pseudo Range) Standard Position (SA Off)": 5,
+        "Unknown": 5,
+        "Interpolated from MAP.": 3,
+        "Interpolated from Digital MAP.": 2,
+        "Interpolation-Digital Map Source": 1
+      }
+    },
+    "HorizontalCoordinateReferenceSystemDatumName": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 2,
+      "unique_rate": 0.0625,
+      "top_values": {
+        "NAD83": 22,
+        "WGS84": 10
+      }
+    },
+    "VerticalMeasure/MeasureValue": {
+      "dtype": "float64",
+      "null_count": 21,
+      "null_rate": 0.65625,
+      "n_unique": 11,
+      "unique_rate": 1.0,
+      "numeric": {
+        "min": 0.0,
+        "p05": 2984.535,
+        "median": 9199.0,
+        "p95": 9350.0,
+        "max": 9380.0,
+        "mean": 7625.785454545455,
+        "zeros": 1,
+        "negatives": 0
+      }
+    },
+    "VerticalMeasure/MeasureUnitCode": {
+      "dtype": "str",
+      "null_count": 21,
+      "null_rate": 0.65625,
+      "n_unique": 2,
+      "unique_rate": 0.181818,
+      "top_values": {
+        "ft": 6,
+        "feet": 5
+      }
+    },
+    "VerticalAccuracyMeasure/MeasureValue": {
+      "dtype": "float64",
+      "null_count": 27,
+      "null_rate": 0.84375,
+      "n_unique": 5,
+      "unique_rate": 1.0,
+      "numeric": {
+        "min": 0.14,
+        "p05": 0.712,
+        "median": 4.3,
+        "p95": 14.0,
+        "max": 15.0,
+        "mean": 6.4879999999999995,
+        "zeros": 0,
+        "negatives": 0
+      }
+    },
+    "VerticalAccuracyMeasure/MeasureUnitCode": {
+      "dtype": "str",
+      "null_count": 27,
+      "null_rate": 0.84375,
+      "n_unique": 1,
+      "unique_rate": 0.2,
+      "top_values": {
+        "feet": 5
+      }
+    },
+    "VerticalCollectionMethodName": {
+      "dtype": "str",
+      "null_count": 22,
+      "null_rate": 0.6875,
+      "n_unique": 6,
+      "unique_rate": 0.6,
+      "top_values": {
+        "Topographic Map Interpolation": 5,
+        "Interpolated from topographic map.": 1,
+        "Unknown.": 1,
+        "Interpolated from Digital Elevation Model": 1,
+        "Level or other surveyed method.": 1,
+        "GNSS2 - Level 2 Quality Survey Grade Global Navigation Satellite System": 1
+      }
+    },
+    "VerticalCoordinateReferenceSystemDatumName": {
+      "dtype": "str",
+      "null_count": 21,
+      "null_rate": 0.65625,
+      "n_unique": 4,
+      "unique_rate": 0.363636,
+      "top_values": {
+        "SEALV": 5,
+        "NGVD29": 3,
+        "NAVD88": 2,
+        "Unknown": 1
+      }
+    },
+    "CountryCode": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 1,
+      "unique_rate": 0.03125,
+      "top_values": {
+        "US": 32
+      }
+    },
+    "StateCode": {
+      "dtype": "int64",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 1,
+      "unique_rate": 0.03125,
+      "numeric": {
+        "min": 8.0,
+        "p05": 8.0,
+        "median": 8.0,
+        "p95": 8.0,
+        "max": 8.0,
+        "mean": 8.0,
+        "zeros": 0,
+        "negatives": 0
+      }
+    },
+    "CountyCode": {
+      "dtype": "int64",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 2,
+      "unique_rate": 0.0625,
+      "numeric": {
+        "min": 67.0,
+        "p05": 67.0,
+        "median": 111.0,
+        "p95": 111.0,
+        "max": 111.0,
+        "mean": 95.875,
+        "zeros": 0,
+        "negatives": 0
+      }
+    },
+    "AquiferName": {
+      "dtype": "float64",
+      "null_count": 32,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "LocalAqfrName": {
+      "dtype": "float64",
+      "null_count": 32,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "FormationTypeText": {
+      "dtype": "float64",
+      "null_count": 32,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "AquiferTypeName": {
+      "dtype": "float64",
+      "null_count": 32,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "ConstructionDateText": {
+      "dtype": "float64",
+      "null_count": 32,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "WellDepthMeasure/MeasureValue": {
+      "dtype": "float64",
+      "null_count": 32,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "WellDepthMeasure/MeasureUnitCode": {
+      "dtype": "float64",
+      "null_count": 32,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "WellHoleDepthMeasure/MeasureValue": {
+      "dtype": "float64",
+      "null_count": 32,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "WellHoleDepthMeasure/MeasureUnitCode": {
+      "dtype": "float64",
+      "null_count": 32,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "ProviderName": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 2,
+      "unique_rate": 0.0625,
+      "top_values": {
+        "STORET": 27,
+        "NWIS": 5
+      }
+    }
+  }
+}

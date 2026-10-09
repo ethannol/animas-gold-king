@@ -1,0 +1,16 @@
+{
+  "frozen_at": "2026-10-09T21:51:18+00:00",
+  "git_head": null,
+  "files": {
+    "docs/prereg.md": "8a5e8228004b13942b9fe1faed30b1b4ef98c02e809c156472c4ff1bdfdbc486",
+    "data/raw/manifest.json": "3e648b168c00370ef8d1b5cc52496802ccaff7862c99485910e72a7897331e8f",
+    "data/raw/query.json": "617806dbc8eedbd505e3472d7c3a417f64ebd0c52b4ac11184b8abac25875588",
+    "data/raw/usgs_daily_USGS-09358000.csv": "8297e6a2ad17b8885b26a1699b26ab72c1694b871873aae6e52aafb02cea92c0",
+    "data/raw/usgs_daily_USGS-09358550.csv": "99ea61e3593432d92148c97134f41302787ce1e793474dcecfb372f8002c5671",
+    "data/raw/usgs_daily_USGS-09359020.csv": "3d06ea68ac29f220ba5570274a7ae6faa68c6654985b7da43929728f641c4f45",
+    "data/raw/usgs_daily_USGS-09361500.csv": "1a0f888b20ba29b6f40077702a492c9d3b9304c93d642de4481088f44d559bab",
+    "data/raw/usgs_daily_USGS-09363500.csv": "f084605aa3c76b425293758dcf703577e482c8133f5b7e0d4f3ed6fc893c9ecf",
+    "data/raw/wqp_result.csv": "7fab0e732d52e45276cfe3f8034f6435d7c05e6fb6701189863ea9e0e4685017",
+    "data/raw/wqp_station.csv": "638f2edc592abda1efed236f37144133b008ad6f28f3cb47ad10f4c9acd6283e"
+  }
+}

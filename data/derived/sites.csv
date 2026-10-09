@@ -1,0 +1,40 @@
+site_id,reach,role,gauge,reach_label,MonitoringLocationName,OrganizationIdentifier,MonitoringLocationTypeName,LatitudeMeasure,LongitudeMeasure,HUCEightDigitCode
+USGS-09358550,cement_creek,impacted,USGS-09358550,Cement Creek at Silverton,"CEMENT CREEK AT SILVERTON, CO",USGS-CO,Stream,37.81971870000000,-107.6636723000000,14080104
+CORIVWCH_WQX-323,cement_creek,impacted,USGS-09358550,Cement Creek at Silverton,Cement Cr - Cement Cr,CORIVWCH_WQX,River/Stream,37.8159000000,-107.6618000000,14080104
+ARSG-CC48,cement_creek,impacted,USGS-09358550,Cement Creek at Silverton,Cement Gauge,ARSG,River/Stream,37.8162740000,-107.6615990000,14080104
+USEPA_REGION8-CC48,cement_creek,impacted,USGS-09358550,Cement Creek at Silverton,CC48,USEPA_REGION8,River/Stream,37.8181150000,-107.6616780000,14080104
+BPMWQX-205-CC48,cement_creek,impacted,USGS-09358550,Cement Creek at Silverton,CC48,BPMWQX,CERCLA Superfund Site,37.8200000000,-107.6631000000,14080104
+21COL001-CEM48,cement_creek,impacted,USGS-09358550,Cement Creek at Silverton,,,,,,
+21COL001_WQX-CEM49,cement_creek,impacted,USGS-09358550,Cement Creek at Silverton,CEMENT CK BLW SILVERTON JUST BFR ANIMAS R,21COL001_WQX,River/Stream,37.8099900000,-107.6606900000,14080104
+21COL001-CEM49,cement_creek,impacted,USGS-09358550,Cement Creek at Silverton,,,,,,
+USGS-374854107393900,cement_creek,impacted,USGS-09358550,Cement Creek at Silverton,,,,,,
+USGS-09358000,animas_above_cement,control,USGS-09358000,"Animas River at Silverton, above Cement Creek","ANIMAS RIVER AT SILVERTON, CO.",USGS-CO,Stream,37.81110770000000,-107.6592278000000,14080104
+CORIVWCH_WQX-103,animas_above_cement,control,USGS-09358000,"Animas River at Silverton, above Cement Creek",Animas - 13th St Br,CORIVWCH_WQX,River/Stream,37.8110000000,-107.6589000000,14080104
+CORIVWCH_WQX-3449,animas_above_cement,control,USGS-09358000,"Animas River at Silverton, above Cement Creek",,,,,,
+ARSG-A68,animas_above_cement,control,USGS-09358000,"Animas River at Silverton, above Cement Creek",14th St. Gauge,ARSG,River/Stream,37.8117150000,-107.6583810000,14080104
+USEPA_REGION8-A68,animas_above_cement,control,USGS-09358000,"Animas River at Silverton, above Cement Creek",A68,USEPA_REGION8,River/Stream,37.8109830000,-107.6593600000,14080104
+BPMWQX-124-A68,animas_above_cement,control,USGS-09358000,"Animas River at Silverton, above Cement Creek",A68,BPMWQX,CERCLA Superfund Site,37.8112019800,-107.6591665000,14080104
+BPMWQX-5384-AN-A68,animas_above_cement,control,USGS-09358000,"Animas River at Silverton, above Cement Creek",AN-A68,BPMWQX,CERCLA Superfund Site,37.8111100000,-107.6591200000,14080104
+21COL001_WQX-9488,animas_above_cement,control,USGS-09358000,"Animas River at Silverton, above Cement Creek",ANIMAS RIVER ABOVE CEMENT CREEK,21COL001_WQX,River/Stream,37.8111580000,-107.6591500000,14080104
+USGS-09359020,animas_below_silverton,impacted,USGS-09359020,Animas River below Silverton (A72),"ANIMAS RIVER BELOW SILVERTON, CO",USGS-CO,Stream,37.78833330000000,-107.6682222000000,14080104
+CORIVWCH_WQX-3611,animas_below_silverton,impacted,USGS-09359020,Animas River below Silverton (A72),Animas - A72,CORIVWCH_WQX,River/Stream,37.7899300000,-107.6675600000,14080104
+CORIVWCH_WQX-3448,animas_below_silverton,impacted,USGS-09359020,Animas River below Silverton (A72),Animas - Below Mineral Cr,CORIVWCH_WQX,River/Stream,37.7889000000,-107.6679000000,14080104
+ARSG-A72,animas_below_silverton,impacted,USGS-09359020,Animas River below Silverton (A72),Animas Gauge Below Silverton,ARSG,River/Stream,37.7905670000,-107.6675030000,14080104
+USEPA_REGION8-A72,animas_below_silverton,impacted,USGS-09359020,Animas River below Silverton (A72),A72,USEPA_REGION8,River/Stream,37.7900170000,-107.6675360000,14080104
+BPMWQX-129-A72,animas_below_silverton,impacted,USGS-09359020,Animas River below Silverton (A72),A72,BPMWQX,CERCLA Superfund Site,37.7902704900,-107.6675778000,14080104
+21COL001_WQX-AN72,animas_below_silverton,impacted,USGS-09359020,Animas River below Silverton (A72),ANIMAS R AT USGS STN JUST ABV RAILROAD BRIDGE,21COL001_WQX,River/Stream,37.7898800000,-107.6674660000,14080104
+21COL001-AN72,animas_below_silverton,impacted,USGS-09359020,Animas River below Silverton (A72),,,,,,
+21COL001-000082,animas_below_silverton,impacted,USGS-09359020,Animas River below Silverton (A72),ANIMAS RIVER NEAR SILVERTON,21COL001,River/Stream,37.7902000,-107.6675700,14080104
+USGS-09361500,animas_durango,downstream,USGS-09361500,Animas River at Durango,"ANIMAS RIVER AT DURANGO, CO",USGS-CO,Stream,37.27916880000000,-107.8803445000000,14080104
+CORIVWCH_WQX-91,animas_durango,downstream,USGS-09361500,Animas River at Durango,Animas - ANIDURCO,CORIVWCH_WQX,River/Stream,37.2797000000,-107.8804000000,14080104
+USEPA_REGION8-Rotary Park,animas_durango,downstream,USGS-09361500,Animas River at Durango,Rotary Park,USEPA_REGION8,River/Stream,37.2805340000,-107.8766220000,14080104
+BPMWQX-2888-Rotary Park,animas_durango,downstream,USGS-09361500,Animas River at Durango,Rotary Park,BPMWQX,CERCLA Superfund Site,37.2804960000,-107.8759900000,14080104
+21COL001_WQX-ROTARY,animas_durango,downstream,USGS-09361500,Animas River at Durango,ANIMAS RIVER AT ROTARY PARK,21COL001_WQX,River/Stream,37.2806910000,-107.8767390000,14080104
+USEPA_REGION8-9423A,animas_durango,downstream,USGS-09361500,Animas River at Durango,Animas River at 9th Street,USEPA_REGION8,River/Stream,37.2745630000,-107.8842730000,14080104
+21COL001_WQX-9423A,animas_durango,downstream,USGS-09361500,Animas River at Durango,ANIMAS RIVER AT DURANGO - 9TH ST BRIDGE,21COL001_WQX,River/Stream,37.2745630000,-107.8842730000,14080104
+USEPA_REGION8-GKM05,animas_durango,downstream,USGS-09361500,Animas River at Durango,GKM05,USEPA_REGION8,River/Stream,37.2687040000,-107.8858570000,14080104
+USGS-09363500,animas_cedar_hill,downstream,USGS-09363500,"Animas River near Cedar Hill, New Mexico","ANIMAS RIVER NEAR CEDAR HILL, NM",USGS-NM,Stream,37.03656944000000,-107.8753333000000,14080104
+SOUTHUTE-AR 2-7,animas_cedar_hill,downstream,USGS-09363500,"Animas River near Cedar Hill, New Mexico",Animas River 2-7,SOUTHUTE,River/Stream,37.0322600000,-107.8754000000,14080104
+USEPA_REGION8-AR2-7,animas_cedar_hill,downstream,USGS-09363500,"Animas River near Cedar Hill, New Mexico",AR2-7,USEPA_REGION8,River/Stream,37.0322920000,-107.8754550000,14080104
+CORIVWCH_WQX-3427,animas_cedar_hill,downstream,USGS-09363500,"Animas River near Cedar Hill, New Mexico",,,,,,
+CORIVWCH_WQX-3428,animas_cedar_hill,downstream,USGS-09363500,"Animas River near Cedar Hill, New Mexico",,,,,,

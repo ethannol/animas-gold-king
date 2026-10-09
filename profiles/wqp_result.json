@@ -1,0 +1,1126 @@
+{
+  "name": "wqp_result",
+  "source": "data/raw/wqp_result.csv",
+  "sha256": "7fab0e732d52e45276cfe3f8034f6435d7c05e6fb6701189863ea9e0e4685017",
+  "rows": 38236,
+  "columns": 81,
+  "duplicate_rows": 0,
+  "candidate_keys": [
+    [
+      "ResultIdentifier"
+    ]
+  ],
+  "fields": {
+    "OrganizationIdentifier": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 9,
+      "unique_rate": 0.000235,
+      "top_values": {
+        "CORIVWCH_WQX": 16706,
+        "ARSG": 6217,
+        "SOUTHUTE": 6146,
+        "21COL001_WQX": 2838,
+        "USEPA_REGION8": 2231,
+        "BPMWQX": 1412,
+        "USGS-CO": 1336,
+        "USGS-NM": 1232
+      }
+    },
+    "OrganizationFormalName": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 9,
+      "unique_rate": 0.000235,
+      "top_values": {
+        "Colorado River Watch": 16706,
+        "Animas River Stakeholders Group (Colorado) (Volunteer)": 6217,
+        "Southern Ute Tribe": 6146,
+        "Colorado Dept. of Public Health & Environment-WQCD": 2838,
+        "USEPA Region 8": 2231,
+        "Bonita Peak Mining": 1412,
+        "USGS Colorado Water Science Center": 1336,
+        "USGS New Mexico Water Science Center": 1232
+      }
+    },
+    "ActivityIdentifier": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 5598,
+      "unique_rate": 0.146407,
+      "top_values": {
+        "ARSG-A68070620051A680720050": 111,
+        "ARSG-A72070620051A720720050": 111,
+        "ARSG-CC48070620051CC480720050": 111,
+        "ARSG-A68091520051A680920050": 110,
+        "ARSG-A72091520051A720920050": 110,
+        "ARSG-CC48091520051CC480920050": 110,
+        "ARSG-CC48071220061CC480720060": 86,
+        "ARSG-A68090620061A680920060": 86
+      }
+    },
+    "ActivityTypeCode": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 9,
+      "unique_rate": 0.000235,
+      "top_values": {
+        "Sample-Routine": 28316,
+        "Field Msr/Obs-Portable Data Logger": 5016,
+        "Field Msr/Obs": 4154,
+        "Quality Control Sample-Field Replicate": 378,
+        "Quality Control Sample-Field Blank": 224,
+        "Sample": 94,
+        "Quality Control Sample-Lab Matrix Spike Duplicate": 24,
+        "Quality Control Field Replicate Msr/Obs": 24
+      }
+    },
+    "ActivityMediaName": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 4,
+      "unique_rate": 0.000105,
+      "top_values": {
+        "Water": 36734,
+        "Sediment": 1310,
+        "Tissue": 160,
+        "Soil": 32
+      }
+    },
+    "ActivityMediaSubdivisionName": {
+      "dtype": "str",
+      "null_count": 13708,
+      "null_rate": 0.35851,
+      "n_unique": 4,
+      "unique_rate": 0.000163,
+      "top_values": {
+        "Surface Water": 23714,
+        "Surface Water Sediment": 662,
+        "Surface Soil/Sediment": 120,
+        "Pore water": 32
+      }
+    },
+    "ActivityStartDate": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 1675,
+      "unique_rate": 0.043807,
+      "top_values": {
+        "2005-07-06": 517,
+        "2005-09-15": 479,
+        "2006-07-12": 446,
+        "2005-05-04": 402,
+        "2005-11-02": 394,
+        "2006-09-06": 391,
+        "2006-11-01": 343,
+        "2006-05-10": 343
+      },
+      "datetime": {
+        "min": "2005-01-10 00:00:00",
+        "max": "2026-07-29 00:00:00"
+      }
+    },
+    "ActivityStartTime/Time": {
+      "dtype": "str",
+      "null_count": 4108,
+      "null_rate": 0.107438,
+      "n_unique": 273,
+      "unique_rate": 0.007999,
+      "top_values": {
+        "00:00:00": 5101,
+        "10:00:00": 1959,
+        "11:00:00": 1873,
+        "12:00:00": 1351,
+        "09:00:00": 1236,
+        "10:30:00": 1235,
+        "11:30:00": 1154,
+        "10:45:00": 985
+      },
+      "datetime": {
+        "min": "2026-10-09 00:00:00",
+        "max": "2026-10-09 22:46:00"
+      }
+    },
+    "ActivityStartTime/TimeZoneCode": {
+      "dtype": "str",
+      "null_count": 4108,
+      "null_rate": 0.107438,
+      "n_unique": 2,
+      "unique_rate": 5.9e-05,
+      "top_values": {
+        "MST": 29537,
+        "MDT": 4591
+      }
+    },
+    "ActivityEndDate": {
+      "dtype": "str",
+      "null_count": 33216,
+      "null_rate": 0.86871,
+      "n_unique": 1040,
+      "unique_rate": 0.207171,
+      "top_values": {
+        "2016-11-24": 6,
+        "2016-04-04": 6,
+        "2016-10-31": 6,
+        "2016-07-10": 6,
+        "2016-05-19": 6,
+        "2016-05-16": 6,
+        "2016-11-11": 6,
+        "2016-04-26": 6
+      },
+      "datetime": {
+        "min": "2016-03-14 00:00:00",
+        "max": "2021-08-31 00:00:00"
+      }
+    },
+    "ActivityEndTime/Time": {
+      "dtype": "str",
+      "null_count": 33216,
+      "null_rate": 0.86871,
+      "n_unique": 2,
+      "unique_rate": 0.000398,
+      "top_values": {
+        "23:59:59": 5016,
+        "12:15:59": 4
+      },
+      "datetime": {
+        "min": "2026-10-09 12:15:59",
+        "max": "2026-10-09 23:59:59"
+      }
+    },
+    "ActivityEndTime/TimeZoneCode": {
+      "dtype": "str",
+      "null_count": 33216,
+      "null_rate": 0.86871,
+      "n_unique": 2,
+      "unique_rate": 0.000398,
+      "top_values": {
+        "MST": 5016,
+        "MDT": 4
+      }
+    },
+    "ActivityRelativeDepthName": {
+      "dtype": "float64",
+      "null_count": 38236,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "ActivityDepthHeightMeasure/MeasureValue": {
+      "dtype": "float64",
+      "null_count": 38236,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "ActivityDepthHeightMeasure/MeasureUnitCode": {
+      "dtype": "float64",
+      "null_count": 38236,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "ActivityDepthAltitudeReferencePointText": {
+      "dtype": "str",
+      "null_count": 38026,
+      "null_rate": 0.994508,
+      "n_unique": 1,
+      "unique_rate": 0.004762,
+      "top_values": {
+        "Surface": 210
+      }
+    },
+    "ActivityTopDepthHeightMeasure/MeasureValue": {
+      "dtype": "float64",
+      "null_count": 38236,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "ActivityTopDepthHeightMeasure/MeasureUnitCode": {
+      "dtype": "float64",
+      "null_count": 38236,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "ActivityBottomDepthHeightMeasure/MeasureValue": {
+      "dtype": "float64",
+      "null_count": 38236,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "ActivityBottomDepthHeightMeasure/MeasureUnitCode": {
+      "dtype": "float64",
+      "null_count": 38236,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "ProjectIdentifier": {
+      "dtype": "str",
+      "null_count": 2568,
+      "null_rate": 0.067162,
+      "n_unique": 11,
+      "unique_rate": 0.000308,
+      "top_values": {
+        "1": 16706,
+        "ARSGDATA": 6217,
+        "Ambient Monitoring;Animas_SanJuan_Watershed": 5022,
+        "Special_Studies": 2412,
+        "Animas_SanJuan_Watershed": 1810,
+        "2901": 1412,
+        "Animas_SanJuan_Watershed;GKM_Followup": 989,
+        "SWMN": 544
+      },
+      "mixed_numeric_text": {
+        "numeric_like": 18118,
+        "non_numeric": 17550,
+        "non_numeric_examples": [
+          "ARSGDATA",
+          "Ambient Monitoring",
+          "SWMN",
+          "Quarterly Annual",
+          "Special_Studies"
+        ]
+      }
+    },
+    "ProjectName": {
+      "dtype": "str",
+      "null_count": 2686,
+      "null_rate": 0.070248,
+      "n_unique": 12,
+      "unique_rate": 0.000338,
+      "top_values": {
+        "Colorado River Watch": 16706,
+        "ARSG Data": 6217,
+        "Ambient Monitoring;Gold King Mine Release": 5022,
+        "CDPHE-WQCD Special Studies Data": 2412,
+        "R08_BPMD_RM_EPA_AF": 1412,
+        "Animas San Juan Watershed": 1210,
+        "Animas San Juan Watershed;Gold King Mine Followup": 989,
+        "Gold King Mine Release": 600
+      }
+    },
+    "ActivityConductingOrganizationText": {
+      "dtype": "str",
+      "null_count": 32830,
+      "null_rate": 0.858615,
+      "n_unique": 4,
+      "unique_rate": 0.00074,
+      "top_values": {
+        "CDPHE-WQCD": 2838,
+        "U.S. Geological Survey-Water Resources Discipline": 1611,
+        "U.S. Geological Survey": 937,
+        "USGS - New Mexico Water Science Center": 20
+      }
+    },
+    "MonitoringLocationIdentifier": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 32,
+      "unique_rate": 0.000837,
+      "top_values": {
+        "SOUTHUTE-AR 2-7": 6146,
+        "CORIVWCH_WQX-103": 4376,
+        "CORIVWCH_WQX-323": 4255,
+        "CORIVWCH_WQX-91": 4253,
+        "CORIVWCH_WQX-3611": 3821,
+        "ARSG-A68": 2336,
+        "ARSG-CC48": 2034,
+        "ARSG-A72": 1847
+      }
+    },
+    "MonitoringLocationName": {
+      "dtype": "str",
+      "null_count": 2686,
+      "null_rate": 0.070248,
+      "n_unique": 22,
+      "unique_rate": 0.000619,
+      "top_values": {
+        "Animas River 2-7": 6146,
+        "Animas - 13th St Br": 4376,
+        "Cement Cr - Cement Cr": 4255,
+        "Animas - ANIDURCO": 4253,
+        "Animas - A72": 3821,
+        "14th St. Gauge": 2336,
+        "Cement Gauge": 2034,
+        "Animas Gauge Below Silverton": 1847
+      }
+    },
+    "ActivityCommentText": {
+      "dtype": "str",
+      "null_count": 29983,
+      "null_rate": 0.784156,
+      "n_unique": 158,
+      "unique_rate": 0.019145,
+      "top_values": {
+        "BOR, Cement Creek at mout": 1313,
+        "CRW, Animas River below C": 1251,
+        "BOR, Animas River below C": 1034,
+        "CRW, Animas River": 970,
+        "BOR, Animas River": 877,
+        "CRW, Cement Creek at mout": 721,
+        "Sediment Sample": 56,
+        "ARSG, Animas River below C": 51
+      }
+    },
+    "SampleAquifer": {
+      "dtype": "float64",
+      "null_count": 38236,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "HydrologicCondition": {
+      "dtype": "str",
+      "null_count": 35668,
+      "null_rate": 0.932838,
+      "n_unique": 7,
+      "unique_rate": 0.002726,
+      "top_values": {
+        "Stable, normal stage": 1803,
+        "Falling stage": 307,
+        "Stable, high stage": 212,
+        "Rising stage": 188,
+        "Stable, low stage": 28,
+        "Peak stage": 24,
+        "Not determined": 6
+      }
+    },
+    "HydrologicEvent": {
+      "dtype": "str",
+      "null_count": 35668,
+      "null_rate": 0.932838,
+      "n_unique": 3,
+      "unique_rate": 0.001168,
+      "top_values": {
+        "Routine sample": 1806,
+        "Snowmelt": 474,
+        "Storm": 288
+      }
+    },
+    "ActivityLocation/LatitudeMeasure": {
+      "dtype": "float64",
+      "null_count": 2686,
+      "null_rate": 0.070248,
+      "n_unique": 25,
+      "unique_rate": 0.000703,
+      "numeric": {
+        "min": 37.03226,
+        "p05": 37.03226,
+        "median": 37.790567,
+        "p95": 37.816274,
+        "max": 37.82,
+        "mean": 37.57735100150352,
+        "zeros": 0,
+        "negatives": 0
+      }
+    },
+    "ActivityLocation/LongitudeMeasure": {
+      "dtype": "float64",
+      "null_count": 2686,
+      "null_rate": 0.070248,
+      "n_unique": 25,
+      "unique_rate": 0.000703,
+      "numeric": {
+        "min": -107.885857,
+        "p05": -107.8804,
+        "median": -107.667503,
+        "p95": -107.658381,
+        "max": -107.658381,
+        "mean": -107.7385809353277,
+        "zeros": 0,
+        "negatives": 35550
+      }
+    },
+    "SampleCollectionMethod/MethodIdentifier": {
+      "dtype": "str",
+      "null_count": 10346,
+      "null_rate": 0.270583,
+      "n_unique": 18,
+      "unique_rate": 0.000645,
+      "top_values": {
+        "SM 1060B": 16706,
+        "UNKNOWN": 2469,
+        "STREAM_1_WQX": 2412,
+        "WIIN_San_Juan_WM": 1242,
+        "FOLLOWUPGKM": 989,
+        "10": 973,
+        "USGS": 829,
+        "SU SAMPLE": 657
+      }
+    },
+    "SampleCollectionMethod/MethodIdentifierContext": {
+      "dtype": "str",
+      "null_count": 10346,
+      "null_rate": 0.270583,
+      "n_unique": 9,
+      "unique_rate": 0.000323,
+      "top_values": {
+        "CORIVWCH_WQX": 16706,
+        "21COL001_WQX": 2838,
+        "ARSG": 2469,
+        "USEPA_REGION8": 2231,
+        "USGS parameter code 82398": 1739,
+        "SOUTHUTE": 960,
+        "USGS": 829,
+        "STREAM_1": 94
+      }
+    },
+    "SampleCollectionMethod/MethodName": {
+      "dtype": "str",
+      "null_count": 10346,
+      "null_rate": 0.270583,
+      "n_unique": 18,
+      "unique_rate": 0.000645,
+      "top_values": {
+        "SM 1060B": 16706,
+        "unknown sample collection": 2469,
+        "WQCD Stream Sampling Procedure": 2412,
+        "WIIN Act San Juan Watershed Monitoring": 1242,
+        "Follow up monitoring for the GKM Release": 989,
+        "Equal width increment (ewi)": 973,
+        "USGS": 829,
+        "Southern Ute Tribe Sample Collection Procedures": 657
+      }
+    },
+    "SampleCollectionMethod/MethodDescriptionText": {
+      "dtype": "str",
+      "null_count": 35464,
+      "null_rate": 0.927503,
+      "n_unique": 2,
+      "unique_rate": 0.000722,
+      "top_values": {
+        "unknown sample collection": 2469,
+        "SAP": 303
+      }
+    },
+    "SampleCollectionEquipmentName": {
+      "dtype": "str",
+      "null_count": 8934,
+      "null_rate": 0.233654,
+      "n_unique": 17,
+      "unique_rate": 0.00058,
+      "top_values": {
+        "Water Bottle": 19463,
+        "Miscellaneous (Other)": 3865,
+        "Water Sampler (Other)": 2412,
+        "US DH-81": 978,
+        "Unknown": 947,
+        "Disposable plastic scoop": 504,
+        "Probe/Sensor": 356,
+        "Sampler, point, automatic": 282
+      }
+    },
+    "ResultIdentifier": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 38236,
+      "unique_rate": 1.0,
+      "top_values": {
+        "NWIS-88923543": 1,
+        "NWIS-88922981": 1,
+        "NWIS-88922707": 1,
+        "NWIS-88923545": 1,
+        "NWIS-19236289": 1,
+        "NWIS-19236292": 1,
+        "NWIS-19236296": 1,
+        "NWIS-19236297": 1
+      }
+    },
+    "ResultDetectionConditionText": {
+      "dtype": "str",
+      "null_count": 35201,
+      "null_rate": 0.920625,
+      "n_unique": 5,
+      "unique_rate": 0.001647,
+      "top_values": {
+        "Not Detected at Detection Limit": 1316,
+        "Not Detected": 1271,
+        "Detected Not Quantified": 243,
+        "Not Reported": 182,
+        "*Non-detect": 23
+      }
+    },
+    "MethodSpeciationName": {
+      "dtype": "float64",
+      "null_count": 38236,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "CharacteristicName": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 12,
+      "unique_rate": 0.000314,
+      "top_values": {
+        "Flow": 3765,
+        "Specific conductance": 3627,
+        "pH": 3498,
+        "Copper": 3487,
+        "Aluminum": 3458,
+        "Cadmium": 3424,
+        "Iron": 3395,
+        "Manganese": 3373
+      }
+    },
+    "ResultSampleFractionText": {
+      "dtype": "str",
+      "null_count": 11181,
+      "null_rate": 0.292421,
+      "n_unique": 6,
+      "unique_rate": 0.000222,
+      "top_values": {
+        "Dissolved": 13081,
+        "Total": 12417,
+        "Total Recoverable": 1036,
+        "Recoverable": 341,
+        "Unfiltered, field": 168,
+        "Total Recovrble": 12
+      }
+    },
+    "ResultMeasureValue": {
+      "dtype": "str",
+      "null_count": 2363,
+      "null_rate": 0.0618,
+      "n_unique": 10204,
+      "unique_rate": 0.284448,
+      "top_values": {
+        "0": 2607,
+        "20": 302,
+        "1": 241,
+        "17": 181,
+        "2": 173,
+        "13": 166,
+        "14": 155,
+        "29": 147
+      },
+      "censoring_markers": {
+        "lt_prefixed": 14,
+        "markers": 0
+      },
+      "mixed_numeric_text": {
+        "numeric_like": 35859,
+        "non_numeric": 14,
+        "non_numeric_examples": [
+          "<0.12",
+          "<16",
+          "<0.6",
+          "<3.2"
+        ]
+      }
+    },
+    "ResultMeasure/MeasureUnitCode": {
+      "dtype": "str",
+      "null_count": 3901,
+      "null_rate": 0.102024,
+      "n_unique": 15,
+      "unique_rate": 0.000437,
+      "top_values": {
+        "ug/L": 22053,
+        "ft3/sec": 3764,
+        "mS/cm": 3130,
+        "ug/l": 1679,
+        "mg/kg": 1325,
+        "mg/L": 1301,
+        "uS/cm @25C": 247,
+        "uS/cm": 158
+      }
+    },
+    "MeasureQualifierCode": {
+      "dtype": "str",
+      "null_count": 32128,
+      "null_rate": 0.840255,
+      "n_unique": 15,
+      "unique_rate": 0.002456,
+      "top_values": {
+        "DL": 2252,
+        "U": 1789,
+        "J": 1147,
+        "D": 283,
+        "J-R": 265,
+        "NAI": 158,
+        "J;U": 98,
+        "J+": 41
+      },
+      "censoring_markers": {
+        "lt_prefixed": 0,
+        "markers": 4041
+      }
+    },
+    "ResultStatusIdentifier": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 4,
+      "unique_rate": 0.000105,
+      "top_values": {
+        "Final": 18611,
+        "Validated": 16607,
+        "Accepted": 1875,
+        "Preliminary": 1143
+      }
+    },
+    "StatisticalBaseCode": {
+      "dtype": "str",
+      "null_count": 33220,
+      "null_rate": 0.868815,
+      "n_unique": 3,
+      "unique_rate": 0.000598,
+      "top_values": {
+        "Mean": 1672,
+        "Maximum": 1672,
+        "Minimum": 1672
+      }
+    },
+    "ResultValueTypeName": {
+      "dtype": "str",
+      "null_count": 221,
+      "null_rate": 0.00578,
+      "n_unique": 3,
+      "unique_rate": 7.9e-05,
+      "top_values": {
+        "Actual": 32985,
+        "Calculated": 5016,
+        "Estimated": 14
+      }
+    },
+    "ResultWeightBasisText": {
+      "dtype": "str",
+      "null_count": 37628,
+      "null_rate": 0.984099,
+      "n_unique": 2,
+      "unique_rate": 0.003289,
+      "top_values": {
+        "Wet": 400,
+        "Dry": 208
+      }
+    },
+    "ResultTimeBasisText": {
+      "dtype": "str",
+      "null_count": 33220,
+      "null_rate": 0.868815,
+      "n_unique": 1,
+      "unique_rate": 0.000199,
+      "top_values": {
+        "24 Hours": 5016
+      }
+    },
+    "ResultTemperatureBasisText": {
+      "dtype": "str",
+      "null_count": 37989,
+      "null_rate": 0.99354,
+      "n_unique": 1,
+      "unique_rate": 0.004049,
+      "top_values": {
+        "25 deg C": 247
+      }
+    },
+    "ResultParticleSizeBasisText": {
+      "dtype": "float64",
+      "null_count": 38236,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "DataQuality/PrecisionValue": {
+      "dtype": "float64",
+      "null_count": 38236,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "DataQuality/BiasValue": {
+      "dtype": "float64",
+      "null_count": 38236,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "DataQuality/ConfidenceIntervalValue": {
+      "dtype": "float64",
+      "null_count": 38236,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "DataQuality/UpperConfidenceLimitValue": {
+      "dtype": "float64",
+      "null_count": 38236,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "DataQuality/LowerConfidenceLimitValue": {
+      "dtype": "float64",
+      "null_count": 38236,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "ResultCommentText": {
+      "dtype": "str",
+      "null_count": 36467,
+      "null_rate": 0.953735,
+      "n_unique": 85,
+      "unique_rate": 0.04805,
+      "top_values": {
+        "Metals Analysis": 303,
+        "Metals in Solids by ICP-AES": 229,
+        "Metals in Water by ICP-AES": 186,
+        "Metals in Water by ICP/MS": 180,
+        "Metals - Dissolved, in Water by ICP/MS": 176,
+        "Metals - Dissolved, in Water by ICP-AES": 158,
+        "Data reload to update metals method codes per NWQL Rapi-Note 17-07 and NWQL Tech Memo 2017.01": 69,
+        "Metals - Dissolved, in Water by ICP/MS. Result was found at or below the specified reporting limit.": 36
+      }
+    },
+    "USGSPCode": {
+      "dtype": "float64",
+      "null_count": 35668,
+      "null_rate": 0.932838,
+      "n_unique": 28,
+      "unique_rate": 0.010903,
+      "numeric": {
+        "min": 61.0,
+        "p05": 95.0,
+        "median": 1049.0,
+        "p95": 71883.0,
+        "max": 90095.0,
+        "mean": 16053.117211838005,
+        "zeros": 0,
+        "negatives": 0
+      }
+    },
+    "ResultDepthHeightMeasure/MeasureValue": {
+      "dtype": "float64",
+      "null_count": 38236,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "ResultDepthHeightMeasure/MeasureUnitCode": {
+      "dtype": "float64",
+      "null_count": 38236,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "ResultDepthAltitudeReferencePointText": {
+      "dtype": "str",
+      "null_count": 38206,
+      "null_rate": 0.999215,
+      "n_unique": 1,
+      "unique_rate": 0.033333,
+      "top_values": {
+        "Surface": 30
+      }
+    },
+    "SubjectTaxonomicName": {
+      "dtype": "str",
+      "null_count": 38076,
+      "null_rate": 0.995815,
+      "n_unique": 9,
+      "unique_rate": 0.05625,
+      "top_values": {
+        "Pantosteus discobolus": 48,
+        "Salmo trutta": 30,
+        "Catostomus latipinnis": 24,
+        "Chironomidae": 16,
+        "Catostomus commersonii x Catostomus latipinnis": 12,
+        "Catostomus commersonii": 12,
+        "Vertebrata": 6,
+        "Catostomus commersonii x Catostomus discobolus": 6
+      }
+    },
+    "SampleTissueAnatomyName": {
+      "dtype": "str",
+      "null_count": 38076,
+      "null_rate": 0.995815,
+      "n_unique": 2,
+      "unique_rate": 0.0125,
+      "top_values": {
+        "Muscle/Muscle Tissue": 144,
+        "Tissue, Unspecified": 16
+      }
+    },
+    "BinaryObjectFileName": {
+      "dtype": "float64",
+      "null_count": 38236,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "BinaryObjectFileTypeCode": {
+      "dtype": "float64",
+      "null_count": 38236,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "ResultFileUrl": {
+      "dtype": "float64",
+      "null_count": 38236,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "ResultAnalyticalMethod/MethodIdentifier": {
+      "dtype": "str",
+      "null_count": 6194,
+      "null_rate": 0.161994,
+      "n_unique": 38,
+      "unique_rate": 0.001186,
+      "top_values": {
+        "200.15": 15390,
+        "USGS": 3505,
+        "UNKNOWN": 2712,
+        "200.8": 2198,
+        "200.7": 1583,
+        "200.8(W)": 1307,
+        "200.7(W)": 1291,
+        "150.1": 1194
+      },
+      "mixed_numeric_text": {
+        "numeric_like": 20545,
+        "non_numeric": 11497,
+        "non_numeric_examples": [
+          "EL006",
+          "PLM43",
+          "PLM48",
+          "PLA15",
+          "PLA11"
+        ]
+      }
+    },
+    "ResultAnalyticalMethod/MethodIdentifierContext": {
+      "dtype": "str",
+      "null_count": 6194,
+      "null_rate": 0.161994,
+      "n_unique": 5,
+      "unique_rate": 0.000156,
+      "top_values": {
+        "USEPA": 23951,
+        "ARSG": 6217,
+        "USGS": 1529,
+        "ASTM": 257,
+        "21COL001_WQX": 88
+      }
+    },
+    "ResultAnalyticalMethod/MethodName": {
+      "dtype": "str",
+      "null_count": 6309,
+      "null_rate": 0.165002,
+      "n_unique": 38,
+      "unique_rate": 0.00119,
+      "top_values": {
+        "Metals in Water by Nebulization and ICP-AES": 15390,
+        "USGS est# provisional": 3505,
+        "unknown analytical procedure": 2712,
+        "200.8 ~ EPA; Metals in Waters by ICP/MS": 2198,
+        "Metals in Water by ICP-AES": 1583,
+        "200.7 W  ~ Metals in Water by ICP-AES": 1254,
+        "200.8 W  ~ Metals in Waters by ICP/MS": 1250,
+        "pH": 1182
+      }
+    },
+    "ResultAnalyticalMethod/MethodUrl": {
+      "dtype": "float64",
+      "null_count": 38236,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "ResultAnalyticalMethod/MethodDescriptionText": {
+      "dtype": "str",
+      "null_count": 28876,
+      "null_rate": 0.755205,
+      "n_unique": 19,
+      "unique_rate": 0.00203,
+      "top_values": {
+        "https://www.nemi.gov/methods/method_summary/4665/": 3448,
+        "https://www.nemi.gov/methods/method_summary/4690/": 2837,
+        "https://www.nemi.gov/methods/method_summary/4685/": 1182,
+        "https://www.nemi.gov/methods/method_summary/4712/": 284,
+        "USGS OF 92-634": 246,
+        "USGS OF 93-125, p 101": 210,
+        "USGS TMR 5-B1": 210,
+        "https://www.nemi.gov/methods/method_summary/9186/": 156
+      }
+    },
+    "LaboratoryName": {
+      "dtype": "str",
+      "null_count": 32377,
+      "null_rate": 0.846767,
+      "n_unique": 13,
+      "unique_rate": 0.002219,
+      "top_values": {
+        "LSD": 1970,
+        "USGS-National Water Quality Lab, Denver, CO": 981,
+        "AGAT Laboratories, Mississauga, Ontario, Canada": 704,
+        "Green Analytical Laboratories": 657,
+        "TestAmerica Savannah": 608,
+        "U.S. EPA, Region 8 Laboratory": 336,
+        "U.S. Geological Survey-Water Resources Discipline": 314,
+        "TDI-BI/B&B Labs": 144
+      }
+    },
+    "AnalysisStartDate": {
+      "dtype": "str",
+      "null_count": 16189,
+      "null_rate": 0.423397,
+      "n_unique": 1218,
+      "unique_rate": 0.055246,
+      "top_values": {
+        "2020-11-20": 192,
+        "2011-04-08": 160,
+        "2005-08-25": 158,
+        "2017-06-06": 155,
+        "2022-05-18": 147,
+        "2012-10-23": 144,
+        "2024-05-15": 140,
+        "2024-09-12": 138
+      },
+      "datetime": {
+        "min": "1930-01-02 00:00:00",
+        "max": "2026-08-05 00:00:00"
+      }
+    },
+    "ResultLaboratoryCommentText": {
+      "dtype": "str",
+      "null_count": 38014,
+      "null_rate": 0.994194,
+      "n_unique": 14,
+      "unique_rate": 0.063063,
+      "top_values": {
+        "sample was diluted": 72,
+        "see result laboratory comment": 66,
+        "below the reporting level but at or above the detection level": 32,
+        "sample was dilutedsee result laboratory comment": 25,
+        "see result field comment": 9,
+        "value verified by rerun, same methodsee result laboratory comment": 6,
+        "value verified by rerun, same method": 3,
+        "result determined by alternate methodsee result laboratory comment": 2
+      }
+    },
+    "ResultDetectionQuantitationLimitUrl": {
+      "dtype": "str",
+      "null_count": 21459,
+      "null_rate": 0.561225,
+      "n_unique": 16777,
+      "unique_rate": 1.0,
+      "top_values": {
+        "https://waterqualitydata.us/data/providers/STORET/organizations/ARSG/activities/ARSG-A72091520051A72C0920050/results/526631744/resdetectqntlmts": 1,
+        "https://waterqualitydata.us/data/providers/STORET/organizations/ARSG/activities/ARSG-A68070620051A68C0720050/results/526571424/resdetectqntlmts": 1,
+        "https://waterqualitydata.us/data/providers/STORET/organizations/ARSG/activities/ARSG-A68040920051A68C0420050/results/526563078/resdetectqntlmts": 1,
+        "https://waterqualitydata.us/data/providers/STORET/organizations/ARSG/activities/ARSG-A72091520051A72C0920050/results/526631746/resdetectqntlmts": 1,
+        "https://waterqualitydata.us/data/providers/STORET/organizations/ARSG/activities/ARSG-CC48110220051CC48C1120050/results/526729391/resdetectqntlmts": 1,
+        "https://waterqualitydata.us/data/providers/STORET/organizations/ARSG/activities/ARSG-A68091420051A68C0920050/results/526577424/resdetectqntlmts": 1,
+        "https://waterqualitydata.us/data/providers/STORET/organizations/ARSG/activities/ARSG-A68050420051A68C0520050/results/526565010/resdetectqntlmts": 1,
+        "https://waterqualitydata.us/data/providers/STORET/organizations/ARSG/activities/ARSG-A72021520051A72C0220050/results/526593909/resdetectqntlmts": 1
+      }
+    },
+    "DetectionQuantitationLimitTypeName": {
+      "dtype": "str",
+      "null_count": 20086,
+      "null_rate": 0.525316,
+      "n_unique": 14,
+      "unique_rate": 0.000771,
+      "top_values": {
+        "Lower Reporting Limit": 13492,
+        "Method Detection Level": 2125,
+        "Lower Quantitation Limit": 1187,
+        "Detection limit by DQCALC": 351,
+        "Practical Quantitation Limit": 303,
+        "Laboratory Reporting Level": 244,
+        "Blank-adjusted method detect limit": 209,
+        "Long Term Method Detection Level": 177
+      }
+    },
+    "DetectionQuantitationLimitMeasure/MeasureValue": {
+      "dtype": "float64",
+      "null_count": 20076,
+      "null_rate": 0.525055,
+      "n_unique": 398,
+      "unique_rate": 0.021916,
+      "numeric": {
+        "min": 0.0,
+        "p05": 0.002,
+        "median": 4.9,
+        "p95": 50.0,
+        "max": 5080.0,
+        "mean": 15.608599186123348,
+        "zeros": 397,
+        "negatives": 0
+      }
+    },
+    "DetectionQuantitationLimitMeasure/MeasureUnitCode": {
+      "dtype": "str",
+      "null_count": 20076,
+      "null_rate": 0.525055,
+      "n_unique": 8,
+      "unique_rate": 0.000441,
+      "top_values": {
+        "ug/L": 14093,
+        "mg/L": 1301,
+        "ug/l": 1288,
+        "mg/kg": 1207,
+        "ug/g": 144,
+        "uS/cm @25C": 49,
+        "std units": 46,
+        "ug/kg": 32
+      }
+    },
+    "LabSamplePreparationUrl": {
+      "dtype": "float64",
+      "null_count": 38236,
+      "null_rate": 1.0,
+      "n_unique": 0,
+      "unique_rate": 0.0
+    },
+    "LastUpdated": {
+      "dtype": "str",
+      "null_count": 2686,
+      "null_rate": 0.070248,
+      "n_unique": 2278,
+      "unique_rate": 0.064079,
+      "top_values": {
+        "2021-09-22T19:47:37": 133,
+        "2021-09-22T20:13:16": 128,
+        "2021-09-22T20:13:11": 126,
+        "2021-09-22T20:13:17": 126,
+        "2021-09-22T19:47:36": 123,
+        "2023-12-14T13:47:11": 123,
+        "2023-12-14T13:47:05": 123,
+        "2023-12-14T13:47:01": 120
+      },
+      "datetime": {
+        "min": "2016-03-22 14:32:37",
+        "max": "2026-09-15 20:21:28"
+      }
+    },
+    "ProviderName": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 2,
+      "unique_rate": 5.2e-05,
+      "top_values": {
+        "STORET": 35668,
+        "NWIS": 2568
+      }
+    }
+  }
+}

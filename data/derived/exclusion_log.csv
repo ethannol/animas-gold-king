@@ -1,0 +1,12 @@
+step,rule,rows_before,rows_after,rows_removed,destination
+E01_media,"ActivityMediaName must be Water (sediment, soil, tissue, pore water out)",38236,36702,1534,excluded
+E02_characteristic,CharacteristicName in the requested list,36702,36702,0,excluded
+E03_qc,"Quality-control activities go to qc_samples.csv, not the sample table",36702,36100,602,qc_samples.csv
+E04_activity_type,ActivityTypeCode must be a routine sample or field measurement,36100,31084,5016,excluded
+E05_flow,Instantaneous discharge rows go to sample_flow.csv,31084,27079,4005,sample_flow.csv
+E06_fraction,Metal rows need a dissolved or total/recoverable fraction label,27079,26653,426,excluded
+E07_not_reported,ResultDetectionConditionText 'Not Reported' carries no value,26653,26471,182,excluded
+E08_unit,"Result (or limit, for non-detects) unit must convert to the canonical unit",26471,26471,0,excluded
+E09_value,A detected row needs a numeric value; a non-detect needs a numeric limit,26471,26471,0,excluded
+E10_positive,Metals and conductance must be > 0 (log scale),26471,26000,471,excluded
+E11_duplicates,One result per org/site/date/time/constituent/fraction: keep the first ResultIdentifier,26000,24558,1442,excluded

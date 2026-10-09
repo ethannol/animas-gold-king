@@ -1,0 +1,46 @@
+{
+  "questions": [
+    {
+      "id": "q1_headline_level_change",
+      "text": "In the headline cell (dissolved zinc, Cement Creek, Colorado River Watch), what is the flow-adjusted level change at the 2015-08-05 release in the primary specification, with its Newey-West 95% interval, and which of the three pre-registered conclusions applies?",
+      "status": "open",
+      "answer_keys": [],
+      "notes": ""
+    },
+    {
+      "id": "q2_pre_period_dependence",
+      "text": "How does the headline level change vary across the 27-fit sensitivity grid (pre-period start 2005/2010/2013, plume-window end, post-period end), and does the sign or significance depend on the pre-period start?",
+      "status": "open",
+      "answer_keys": [],
+      "notes": ""
+    },
+    {
+      "id": "q3_blind_changepoints",
+      "text": "Where do the blind change-points (PELT and binary segmentation on the monthly flow-adjusted residuals of the headline cell) fall relative to the release (2015-08) and the treatment-plant start (2015-10)?",
+      "status": "open",
+      "answer_keys": [],
+      "notes": ""
+    },
+    {
+      "id": "q4_control_difference",
+      "text": "Does the upstream control (Animas above Cement Creek) show a change of the same sign, and what is the difference-in-differences level change for Cement Creek and for the Animas below Silverton?",
+      "status": "open",
+      "answer_keys": [],
+      "notes": ""
+    },
+    {
+      "id": "q5_multiplicity",
+      "text": "Across the 64 reach x constituent x fraction cells at the primary specification, how many are estimable, how many have raw p < 0.05, and how many survive Benjamini-Hochberg at 5% FDR?",
+      "status": "open",
+      "answer_keys": [],
+      "notes": ""
+    },
+    {
+      "id": "q6_coverage_comparability",
+      "text": "How did sampling intensity, organisations and reporting limits change across the release date, and which series are comparable across it?",
+      "status": "open",
+      "answer_keys": [],
+      "notes": ""
+    }
+  ]
+}

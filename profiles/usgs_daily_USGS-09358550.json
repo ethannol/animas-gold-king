@@ -1,0 +1,196 @@
+{
+  "name": "usgs_daily_USGS-09358550",
+  "source": "data/raw/usgs_daily_USGS-09358550.csv",
+  "sha256": "99ea61e3593432d92148c97134f41302787ce1e793474dcecfb372f8002c5671",
+  "rows": 7951,
+  "columns": 12,
+  "duplicate_rows": 0,
+  "candidate_keys": [
+    [
+      "time"
+    ]
+  ],
+  "fields": {
+    "x": {
+      "dtype": "float64",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 1,
+      "unique_rate": 0.000126,
+      "numeric": {
+        "min": -107.66369006519584,
+        "p05": -107.66369006519584,
+        "median": -107.66369006519584,
+        "p95": -107.66369006519584,
+        "max": -107.66369006519584,
+        "mean": -107.66369006519584,
+        "zeros": 0,
+        "negatives": 7951
+      }
+    },
+    "y": {
+      "dtype": "float64",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 1,
+      "unique_rate": 0.000126,
+      "numeric": {
+        "min": 37.81971649650515,
+        "p05": 37.81971649650515,
+        "median": 37.81971649650515,
+        "p95": 37.81971649650515,
+        "max": 37.81971649650515,
+        "mean": 37.819716496505166,
+        "zeros": 0,
+        "negatives": 0
+      }
+    },
+    "time_series_id": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 1,
+      "unique_rate": 0.000126,
+      "top_values": {
+        "b661bfc8ac7d4442b9371ac20bbc50cc": 7951
+      }
+    },
+    "monitoring_location_id": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 1,
+      "unique_rate": 0.000126,
+      "top_values": {
+        "USGS-09358550": 7951
+      }
+    },
+    "parameter_code": {
+      "dtype": "int64",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 1,
+      "unique_rate": 0.000126,
+      "numeric": {
+        "min": 60.0,
+        "p05": 60.0,
+        "median": 60.0,
+        "p95": 60.0,
+        "max": 60.0,
+        "mean": 60.0,
+        "zeros": 0,
+        "negatives": 0
+      }
+    },
+    "statistic_id": {
+      "dtype": "int64",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 1,
+      "unique_rate": 0.000126,
+      "numeric": {
+        "min": 3.0,
+        "p05": 3.0,
+        "median": 3.0,
+        "p95": 3.0,
+        "max": 3.0,
+        "mean": 3.0,
+        "zeros": 0,
+        "negatives": 0
+      }
+    },
+    "time": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 7951,
+      "unique_rate": 1.0,
+      "top_values": {
+        "2016-11-28": 1,
+        "2025-08-19": 1,
+        "2009-07-23": 1,
+        "2020-10-04": 1,
+        "2009-02-18": 1,
+        "2008-01-02": 1,
+        "2008-04-22": 1,
+        "2016-12-04": 1
+      },
+      "datetime": {
+        "min": "2005-01-01 00:00:00",
+        "max": "2026-10-08 00:00:00"
+      }
+    },
+    "value": {
+      "dtype": "float64",
+      "null_count": 23,
+      "null_rate": 0.002893,
+      "n_unique": 993,
+      "unique_rate": 0.125252,
+      "numeric": {
+        "min": 9.43,
+        "p05": 11.5,
+        "median": 16.9,
+        "p95": 133.0,
+        "max": 408.0,
+        "mean": 35.292043390514635,
+        "zeros": 0,
+        "negatives": 0
+      }
+    },
+    "unit_of_measure": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 1,
+      "unique_rate": 0.000126,
+      "top_values": {
+        "ft^3/s": 7951
+      }
+    },
+    "approval_status": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 2,
+      "unique_rate": 0.000252,
+      "top_values": {
+        "Approved": 7682,
+        "Provisional": 269
+      }
+    },
+    "qualifier": {
+      "dtype": "str",
+      "null_count": 6229,
+      "null_rate": 0.783423,
+      "n_unique": 4,
+      "unique_rate": 0.002323,
+      "top_values": {
+        "['ESTIMATED']": 1549,
+        "['ESTIMATED', 'ICE']": 100,
+        "['ICE']": 69,
+        "['EQUIP']": 4
+      }
+    },
+    "last_modified": {
+      "dtype": "str",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_unique": 139,
+      "unique_rate": 0.017482,
+      "top_values": {
+        "2025-03-10 23:35:50.351282+00:00": 6598,
+        "2025-12-02 14:48:32.963354+00:00": 680,
+        "2026-02-20 17:29:22.111808+00:00": 300,
+        "2025-05-07 22:03:09.584094+00:00": 104,
+        "2026-05-14 20:42:22.507578+00:00": 84,
+        "2026-08-17 22:52:19.014686+00:00": 24,
+        "2026-04-16 13:20:21.591128+00:00": 12,
+        "2026-07-13 17:28:21.576925+00:00": 5
+      },
+      "datetime": {
+        "min": "2025-03-10 23:35:50.351282+00:00",
+        "max": "2026-10-09 09:07:52.284641+00:00"
+      }
+    }
+  }
+}

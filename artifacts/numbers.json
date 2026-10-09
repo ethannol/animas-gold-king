@@ -1,0 +1,245 @@
+{
+  "prepare.daily_rows": {
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "value": 39751
+  },
+  "prepare.excl.E01_media": {
+    "note": "ActivityMediaName must be Water (sediment, soil, tissue, pore water out)",
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "unit": "rows",
+    "value": 1534
+  },
+  "prepare.excl.E02_characteristic": {
+    "note": "CharacteristicName in the requested list",
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "unit": "rows",
+    "value": 0
+  },
+  "prepare.excl.E03_qc": {
+    "note": "Quality-control activities go to qc_samples.csv, not the sample table",
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "unit": "rows",
+    "value": 602
+  },
+  "prepare.excl.E04_activity_type": {
+    "note": "ActivityTypeCode must be a routine sample or field measurement",
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "unit": "rows",
+    "value": 5016
+  },
+  "prepare.excl.E05_flow": {
+    "note": "Instantaneous discharge rows go to sample_flow.csv",
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "unit": "rows",
+    "value": 4005
+  },
+  "prepare.excl.E06_fraction": {
+    "note": "Metal rows need a dissolved or total/recoverable fraction label",
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "unit": "rows",
+    "value": 426
+  },
+  "prepare.excl.E07_not_reported": {
+    "note": "ResultDetectionConditionText 'Not Reported' carries no value",
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "unit": "rows",
+    "value": 182
+  },
+  "prepare.excl.E08_unit": {
+    "note": "Result (or limit, for non-detects) unit must convert to the canonical unit",
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "unit": "rows",
+    "value": 0
+  },
+  "prepare.excl.E09_value": {
+    "note": "A detected row needs a numeric value; a non-detect needs a numeric limit",
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "unit": "rows",
+    "value": 0
+  },
+  "prepare.excl.E10_positive": {
+    "note": "Metals and conductance must be > 0 (log scale)",
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "unit": "rows",
+    "value": 471
+  },
+  "prepare.excl.E11_duplicates": {
+    "note": "One result per org/site/date/time/constituent/fraction: keep the first ResultIdentifier",
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "unit": "rows",
+    "value": 1442
+  },
+  "prepare.excluded_rows": {
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "value": 9071
+  },
+  "prepare.first_date": {
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "value": "2005-01-10"
+  },
+  "prepare.flow_rows": {
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "value": 4005
+  },
+  "prepare.last_date": {
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "value": "2026-07-29"
+  },
+  "prepare.n_censored": {
+    "n": 24558,
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "value": 4345
+  },
+  "prepare.n_orgs": {
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "value": 9
+  },
+  "prepare.n_sites_with_data": {
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "value": 32
+  },
+  "prepare.qc_rows": {
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "value": 602
+  },
+  "prepare.raw_rows": {
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "value": 38236
+  },
+  "prepare.riverwatch_first": {
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "value": "2005-01-10"
+  },
+  "prepare.riverwatch_last": {
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "value": "2026-05-18"
+  },
+  "prepare.riverwatch_rows": {
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "value": 16142
+  },
+  "prepare.sample_rows": {
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "value": 24558
+  },
+  "prepare.share_censored": {
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "value": 0.17692808860656406
+  },
+  "prepare.share_with_q": {
+    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "source": "10_prepare.py",
+    "value": 1.0
+  },
+  "snapshot.api_version": {
+    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "source": "00_snapshot.py",
+    "value": "unknown"
+  },
+  "snapshot.daily_rows_max": {
+    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "source": "00_snapshot.py",
+    "unit": "rows",
+    "value": 7951
+  },
+  "snapshot.daily_rows_min": {
+    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "source": "00_snapshot.py",
+    "unit": "rows",
+    "value": 7947
+  },
+  "snapshot.daily_rows_total": {
+    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "source": "00_snapshot.py",
+    "unit": "rows",
+    "value": 39751
+  },
+  "snapshot.download_date": {
+    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "source": "00_snapshot.py",
+    "value": "2026-10-09"
+  },
+  "snapshot.legacy_dv_status": {
+    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "source": "00_snapshot.py",
+    "value": 200
+  },
+  "snapshot.n_files": {
+    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "source": "00_snapshot.py",
+    "value": 7
+  },
+  "snapshot.n_gauges": {
+    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "source": "00_snapshot.py",
+    "value": 5
+  },
+  "snapshot.wqp_nwis_rows": {
+    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "source": "00_snapshot.py",
+    "unit": "rows",
+    "value": 2568
+  },
+  "snapshot.wqp_result_mb": {
+    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "source": "00_snapshot.py",
+    "unit": "MB",
+    "value": 21.3
+  },
+  "snapshot.wqp_result_rows": {
+    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "source": "00_snapshot.py",
+    "unit": "rows",
+    "value": 38236
+  },
+  "snapshot.wqp_sites": {
+    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "source": "00_snapshot.py",
+    "value": 32
+  },
+  "snapshot.wqp_storet_rows": {
+    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "source": "00_snapshot.py",
+    "unit": "rows",
+    "value": 35668
+  },
+  "snapshot.wqx3_missing_rows": {
+    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "source": "00_snapshot.py",
+    "unit": "rows",
+    "value": 2568
+  },
+  "snapshot.wqx3_rows": {
+    "note": "same query on the WQX3 fullPhysChem profile; equals the STORET count, i.e. no NWIS rows",
+    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "source": "00_snapshot.py",
+    "unit": "rows",
+    "value": 35668
+  }
+}
