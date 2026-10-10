@@ -18,3 +18,12 @@ def test_white_noise_has_no_change_points():
         x = np.random.default_rng(seed).normal(size=240)
         assert pelt(x) == []
         assert binary_segmentation(x) == []
+
+
+def test_bh_rejects_small_p_only():
+    from animas.analysis import bh_reject
+
+    p = np.array([0.001, 0.2, 0.03, np.nan, 0.5, 0.004])
+    rej = bh_reject(p, q=0.05)
+    assert rej.tolist() == [True, False, True, False, False, True]
+    assert not bh_reject(np.array([0.2, 0.3, np.nan])).any()

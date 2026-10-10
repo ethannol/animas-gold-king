@@ -24,7 +24,7 @@ import numpy as np
 import pandas as pd
 from cairn import checked_merge, recount, unique_key
 
-from animas.units import CHARACTERISTICS, METALS, UnitError, factor_to_canonical, fraction_class
+from animas.units import CHARACTERISTICS, UnitError, factor_to_canonical, fraction_class
 
 ROOT = Path(__file__).resolve().parents[2]
 RAW = ROOT / "data" / "raw"
@@ -197,10 +197,12 @@ def split_tables(d: pd.DataFrame, log: ExclusionLog) -> tuple[pd.DataFrame, pd.D
     d = log.step("E09_value", "A detected row needs a numeric value; a non-detect needs a numeric limit",
                  d, np.where(d["censored"], d["rl"].notna(), d["value"].notna()))
     positive = np.where(d["constituent"] == "ph", True, np.where(d["censored"], d["rl"] > 0, d["value"] > 0))
-    d = log.step("E10_positive", "Metals and conductance must be > 0 (log scale)", d, pd.Series(positive, index=d.index))
+    d = log.step("E10_positive", "Metals and conductance must be > 0 (log scale)", d,
+                 pd.Series(positive, index=d.index))
     key = ["org", "site_id", "date", "time", "constituent", "fraction"]
     d = d.sort_values([*key, "result_id"])
-    d = log.step("E11_duplicates", "One result per org/site/date/time/constituent/fraction: keep the first ResultIdentifier",
+    d = log.step("E11_duplicates",
+                 "One result per org/site/date/time/constituent/fraction: keep the first ResultIdentifier",
                  d, ~d.duplicated(key, keep="first"))
     return d.reset_index(drop=True), qc.reset_index(drop=True), flow.reset_index(drop=True)
 

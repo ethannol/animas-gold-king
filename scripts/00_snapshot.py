@@ -29,6 +29,7 @@ record("snapshot.n_gauges", len(daily))
 record("snapshot.daily_rows_total", sum(v["rows_excluding_header"] for v in daily.values()), unit="rows")
 record("snapshot.daily_rows_min", min(v["rows_excluding_header"] for v in daily.values()), unit="rows")
 record("snapshot.daily_rows_max", max(v["rows_excluding_header"] for v in daily.values()), unit="rows")
-record("snapshot.api_version", f["usgs_daily_USGS-09358550.csv"]["headers"].get("api-version", "unknown"))
+hdrs = {k.lower(): v for k, v in f["usgs_daily_USGS-09358550.csv"]["headers"].items()}
+record("snapshot.api_version", hdrs.get("api-version", "unknown"))
 record("snapshot.legacy_dv_status", manifest["probes"]["legacy_waterservices_dv"].get("http_status", "error"))
 print("snapshot ok")

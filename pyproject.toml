@@ -33,8 +33,12 @@ packages = ["src/animas"]
 testpaths = ["tests"]
 
 [tool.ruff]
-line-length = 100
+line-length = 120
 target-version = "py312"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+# pipeline scripts carry long `record(...)` provenance notes on one line by design
+"scripts/*.py" = ["E501"]

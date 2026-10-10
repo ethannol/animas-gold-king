@@ -3,44 +3,94 @@
     {
       "id": "q1_headline_level_change",
       "text": "In the headline cell (dissolved zinc, Cement Creek, Colorado River Watch), what is the flow-adjusted level change at the 2015-08-05 release in the primary specification, with its Newey-West 95% interval, and which of the three pre-registered conclusions applies?",
-      "status": "open",
-      "answer_keys": [],
-      "notes": ""
+      "status": "answered",
+      "answer_keys": [
+        "its.headline.level_change_pct",
+        "its.headline.level_change_pct_lo",
+        "its.headline.level_change_pct_hi",
+        "its.headline.level_change_p",
+        "its.headline.verdict"
+      ],
+      "notes": "Primary specification: interval includes zero; rule 3 applies. The 2010 and 2013 pre-period starts exclude zero (grid.pre2010.*, grid.pre2013.*); the exploratory cleaned refit (explore.clean.*) excludes zero."
     },
     {
       "id": "q2_pre_period_dependence",
       "text": "How does the headline level change vary across the 27-fit sensitivity grid (pre-period start 2005/2010/2013, plume-window end, post-period end), and does the sign or significance depend on the pre-period start?",
-      "status": "open",
-      "answer_keys": [],
-      "notes": ""
+      "status": "answered",
+      "answer_keys": [
+        "grid.n_fits",
+        "grid.n_ci_excludes_zero",
+        "grid.pct_min",
+        "grid.pct_max",
+        "grid.pre2005.level_change_pct",
+        "grid.pre2010.level_change_pct",
+        "grid.pre2013.level_change_pct",
+        "grid.pre2005_plume20150930_post2016.level_change_pct"
+      ],
+      "notes": "Point estimates near -20 percent for every pre-period start with the 2025 post-period end; the interval excludes zero only for the 2010 and 2013 starts. The post-period end matters more: ending in 2016 the change is positive."
     },
     {
       "id": "q3_blind_changepoints",
       "text": "Where do the blind change-points (PELT and binary segmentation on the monthly flow-adjusted residuals of the headline cell) fall relative to the release (2015-08) and the treatment-plant start (2015-10)?",
-      "status": "open",
-      "answer_keys": [],
-      "notes": ""
+      "status": "answered",
+      "answer_keys": [
+        "cp.headline.pelt_months",
+        "cp.headline.pelt_rel_release_months",
+        "cp.headline.pelt_rel_plant_months",
+        "cp.headline.strongest_month",
+        "cp.headline.strongest_rel_release_months",
+        "cp.explore.strongest_month",
+        "cp.explore.strongest_rel_release_months",
+        "cp.explore.strongest_rel_plant_months"
+      ],
+      "notes": "Pre-registered search: strongest split 65 months before the release (artefact-driven). Cleaned series (exploratory): strongest split 2016-02, six months after the release and four after the plant start."
     },
     {
       "id": "q4_control_difference",
       "text": "Does the upstream control (Animas above Cement Creek) show a change of the same sign, and what is the difference-in-differences level change for Cement Creek and for the Animas below Silverton?",
-      "status": "open",
-      "answer_keys": [],
-      "notes": ""
+      "status": "answered",
+      "answer_keys": [
+        "did.control_zinc.level_change_pct",
+        "did.control_zinc.level_change_p",
+        "did.headline.level_change_pct",
+        "did.headline.level_change_pct_lo",
+        "did.headline.level_change_pct_hi",
+        "did.headline.slope_change_per_yr",
+        "did.below_silverton.level_change_pct",
+        "explore.clean.control.level_change_pct"
+      ],
+      "notes": "The control's pre-registered -21 percent is driven by three coded zeros; cleaned it is -11 percent with an interval including zero. DiD level change -24 percent with a differential downward slope."
     },
     {
       "id": "q5_multiplicity",
       "text": "Across the 64 reach x constituent x fraction cells at the primary specification, how many are estimable, how many have raw p < 0.05, and how many survive Benjamini-Hochberg at 5% FDR?",
-      "status": "open",
-      "answer_keys": [],
-      "notes": ""
+      "status": "answered",
+      "answer_keys": [
+        "mult.n_cells",
+        "mult.n_estimable",
+        "mult.n_raw_sig",
+        "mult.n_bh_sig",
+        "mult.n_negative_point",
+        "mult.median_pct"
+      ],
+      "notes": "52 of 64 estimable; 7 raw p below 0.05; 0 survive Benjamini-Hochberg at 5 percent FDR. Cleaned (exploratory): 9 and 0."
     },
     {
       "id": "q6_coverage_comparability",
       "text": "How did sampling intensity, organisations and reporting limits change across the release date, and which series are comparable across it?",
-      "status": "open",
-      "answer_keys": [],
-      "notes": ""
+      "status": "answered",
+      "answer_keys": [
+        "coverage.events_per_year_pre",
+        "coverage.events_per_year_post",
+        "coverage.orgs_with_pre_events",
+        "coverage.orgs_with_post_events",
+        "coverage.rw_events_pre",
+        "coverage.rw_events_post",
+        "coverage.rw_first_year_with_limits",
+        "coverage.rw_arsenic_dissolved_censored",
+        "snapshot.wqx3_missing_rows"
+      ],
+      "notes": "Sampling events rose about 2.5-fold and organisations from four to nine after the release; only Colorado River Watch is comparable across it (one method, monthly, 2005-2025). Reporting limits were unrecorded before 2013 and rose for several metals after 2019; arsenic is not estimable anywhere."
     }
   ]
 }

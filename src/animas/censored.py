@@ -141,10 +141,19 @@ def censored_regression(
     if cens.any():
         res = optimize.minimize(
             _negloglik, theta0, args=(X, y, cens), jac=_grad, method="BFGS",
-            options={"gtol": 1e-8, "maxiter": 2000},
+            options={"gtol": 1e-6, "maxiter": 2000},
         )
         theta = res.x
-        converged = bool(res.success)
+        # BFGS reports "precision loss" on flat likelihoods even when the score is
+        # numerically zero; judge convergence by the score itself, then polish if needed.
+        tol = 1e-4 * n
+        converged = bool(np.max(np.abs(_grad(theta, X, y, cens))) < tol)
+        if not converged:
+            res2 = optimize.minimize(_negloglik, theta, args=(X, y, cens), jac=_grad,
+                                     method="L-BFGS-B", options={"maxiter": 5000})
+            if res2.fun <= res.fun:
+                theta = res2.x
+            converged = bool(np.max(np.abs(_grad(theta, X, y, cens))) < tol)
     else:
         sigma_ml = np.sqrt((resid0**2).mean())
         theta = np.append(beta0, np.log(sigma_ml))

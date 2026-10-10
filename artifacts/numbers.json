@@ -1,245 +1,4238 @@
 {
+  "const.alpha": {
+    "note": "raw significance threshold used only for counting",
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 0.05
+  },
+  "const.ci_pct": {
+    "note": "nominal coverage of every interval in the report",
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 95
+  },
+  "const.fdr_pct": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 5
+  },
+  "const.hac_lags": {
+    "note": "Newey-West Bartlett bandwidth, observations",
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 12
+  },
+  "const.implausible_divisor": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 10
+  },
+  "const.implausible_quantile_pct": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 5
+  },
+  "const.max_cens_pre_pct": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 50
+  },
+  "const.min_post": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 36
+  },
+  "const.min_pre": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 60
+  },
+  "const.n_harmonics": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 2
+  },
+  "coverage.cc.events_per_year_post2y": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 37.0
+  },
+  "coverage.cc.events_per_year_pre": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 14.3
+  },
+  "coverage.events_per_year_post": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 87.2
+  },
+  "coverage.events_per_year_pre": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 59.7
+  },
+  "coverage.events_per_year_ratio": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 1.46
+  },
+  "coverage.events_post": {
+    "note": "metal sampling events from 2015-10-01, all organisations",
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 944
+  },
+  "coverage.events_pre": {
+    "note": "metal sampling events 2005-01-01 to 2015-08-04, all organisations",
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 632
+  },
+  "coverage.events_total": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 1603
+  },
+  "coverage.n_metal_results": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 22804
+  },
+  "coverage.n_methods": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 18
+  },
+  "coverage.n_orgs": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 9
+  },
+  "coverage.n_qc_blanks": {
+    "recorded_at": "2026-10-10T01:00:06+00:00",
+    "source": "20_coverage.py",
+    "value": 224
+  },
+  "coverage.n_qc_replicates": {
+    "recorded_at": "2026-10-10T01:00:06+00:00",
+    "source": "20_coverage.py",
+    "value": 362
+  },
+  "coverage.n_qc_rows": {
+    "recorded_at": "2026-10-10T01:00:06+00:00",
+    "source": "20_coverage.py",
+    "value": 602
+  },
+  "coverage.n_sites": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 32
+  },
+  "coverage.orgs_with_post_events": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 7
+  },
+  "coverage.orgs_with_pre_events": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 8
+  },
+  "coverage.r4.events_per_year_post": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 70.4
+  },
+  "coverage.r4.events_per_year_post2y": {
+    "note": "same, 2015-10-01 to 2017-09-30 (the two years after the plant start)",
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 129.0
+  },
+  "coverage.r4.events_per_year_pre": {
+    "note": "metal sampling events per year at the four River Watch reaches, 2005-01-01 to 2015-08-04",
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 59.2
+  },
+  "coverage.r4.orgs_post2y": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 5
+  },
+  "coverage.r4.orgs_pre": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 6
+  },
+  "coverage.r4.orgs_pre_steady": {
+    "note": "organisations with at least 100 pre-period events at the four reaches",
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 1
+  },
+  "coverage.r4.ratio_post2y": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 2.18
+  },
+  "coverage.r4.rw_share_post2y": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 0.364
+  },
+  "coverage.r4.rw_share_pre": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 0.758
+  },
+  "coverage.rw_arsenic_dissolved_censored": {
+    "recorded_at": "2026-10-10T01:00:06+00:00",
+    "source": "20_coverage.py",
+    "value": 0.982
+  },
+  "coverage.rw_cement_events": {
+    "recorded_at": "2026-10-10T01:00:06+00:00",
+    "source": "20_coverage.py",
+    "value": 254
+  },
+  "coverage.rw_cement_longest_gap_days": {
+    "recorded_at": "2026-10-10T01:00:06+00:00",
+    "source": "20_coverage.py",
+    "value": 91
+  },
+  "coverage.rw_events": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 962
+  },
+  "coverage.rw_events_post": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 479
+  },
+  "coverage.rw_events_pre": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 475
+  },
+  "coverage.rw_first_year_with_limits": {
+    "recorded_at": "2026-10-10T01:00:06+00:00",
+    "source": "20_coverage.py",
+    "value": 2013
+  },
+  "coverage.rw_method": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": "200.15"
+  },
+  "coverage.rw_rows_bound_assigned": {
+    "recorded_at": "2026-10-10T01:00:06+00:00",
+    "source": "20_coverage.py",
+    "value": 1739
+  },
+  "coverage.rw_rows_with_reported_limit": {
+    "recorded_at": "2026-10-10T01:00:06+00:00",
+    "source": "20_coverage.py",
+    "value": 2002
+  },
+  "coverage.rw_share_of_post_events": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 0.507
+  },
+  "coverage.rw_share_of_pre_events": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 0.752
+  },
+  "coverage.rw_zinc_dissolved_censored": {
+    "recorded_at": "2026-10-10T01:00:06+00:00",
+    "source": "20_coverage.py",
+    "value": 0.014
+  },
+  "coverage.rw_zinc_rl_max": {
+    "recorded_at": "2026-10-10T01:00:06+00:00",
+    "source": "20_coverage.py",
+    "unit": "ug/L",
+    "value": 6.7
+  },
+  "coverage.rw_zinc_rl_min": {
+    "recorded_at": "2026-10-10T01:00:06+00:00",
+    "source": "20_coverage.py",
+    "unit": "ug/L",
+    "value": 5.0
+  },
+  "coverage.share_metal_results_censored": {
+    "recorded_at": "2026-10-10T01:00:05+00:00",
+    "source": "20_coverage.py",
+    "value": 0.191
+  },
+  "cp.cells.median_strongest_rel_release": {
+    "recorded_at": "2026-10-10T01:00:13+00:00",
+    "source": "50_changepoint.py",
+    "unit": "months",
+    "value": 14.0
+  },
+  "cp.cells.n": {
+    "recorded_at": "2026-10-10T01:00:13+00:00",
+    "source": "50_changepoint.py",
+    "value": 52
+  },
+  "cp.cells.n_any_pelt_within_3mo_release": {
+    "recorded_at": "2026-10-10T01:00:13+00:00",
+    "source": "50_changepoint.py",
+    "value": 12
+  },
+  "cp.cells.n_strongest_within_12mo_release": {
+    "recorded_at": "2026-10-10T01:00:13+00:00",
+    "source": "50_changepoint.py",
+    "value": 6
+  },
+  "cp.cells.n_strongest_within_3mo_release": {
+    "recorded_at": "2026-10-10T01:00:13+00:00",
+    "source": "50_changepoint.py",
+    "value": 0
+  },
+  "cp.cells.n_with_any": {
+    "recorded_at": "2026-10-10T01:00:13+00:00",
+    "source": "50_changepoint.py",
+    "value": 49
+  },
+  "cp.explore.n_pelt": {
+    "recorded_at": "2026-10-10T01:00:13+00:00",
+    "source": "50_changepoint.py",
+    "value": 6
+  },
+  "cp.explore.n_rows_removed": {
+    "note": "exploratory: rows below a tenth of the 5th percentile of detected values removed",
+    "recorded_at": "2026-10-10T01:00:13+00:00",
+    "source": "50_changepoint.py",
+    "value": 3
+  },
+  "cp.explore.pelt_months": {
+    "recorded_at": "2026-10-10T01:00:13+00:00",
+    "source": "50_changepoint.py",
+    "value": "2006-10; 2007-11; 2014-12; 2016-02; 2017-06; 2020-11"
+  },
+  "cp.explore.pelt_rel_plant_months": {
+    "recorded_at": "2026-10-10T01:00:13+00:00",
+    "source": "50_changepoint.py",
+    "value": "-108; -95; -10; 4; 20; 61"
+  },
+  "cp.explore.pelt_rel_release_months": {
+    "recorded_at": "2026-10-10T01:00:13+00:00",
+    "source": "50_changepoint.py",
+    "value": "-106; -93; -8; 6; 22; 63"
+  },
+  "cp.explore.post_release_shift_pct": {
+    "note": "percent shift in level across the first change-point at or after the release",
+    "recorded_at": "2026-10-10T01:00:13+00:00",
+    "source": "50_changepoint.py",
+    "value": -30.9
+  },
+  "cp.explore.segment_means": {
+    "recorded_at": "2026-10-10T01:00:13+00:00",
+    "source": "50_changepoint.py",
+    "value": "-0.05; +0.33; +0.12; +0.29; -0.08; -0.24; -0.09"
+  },
+  "cp.explore.strongest_month": {
+    "recorded_at": "2026-10-10T01:00:13+00:00",
+    "source": "50_changepoint.py",
+    "value": "2016-02"
+  },
+  "cp.explore.strongest_rel_plant_months": {
+    "recorded_at": "2026-10-10T01:00:13+00:00",
+    "source": "50_changepoint.py",
+    "value": 4
+  },
+  "cp.explore.strongest_rel_release_months": {
+    "recorded_at": "2026-10-10T01:00:13+00:00",
+    "source": "50_changepoint.py",
+    "value": 6
+  },
+  "cp.headline.bs_months": {
+    "recorded_at": "2026-10-10T01:00:12+00:00",
+    "source": "50_changepoint.py",
+    "value": "2010-03; 2009-01; 2016-02; 2007-05; 2020-11"
+  },
+  "cp.headline.first_shift_pct": {
+    "note": "percent change in the flow-adjusted level across the first PELT change-point",
+    "recorded_at": "2026-10-10T01:00:12+00:00",
+    "source": "50_changepoint.py",
+    "value": 39.2
+  },
+  "cp.headline.n_bs": {
+    "recorded_at": "2026-10-10T01:00:12+00:00",
+    "source": "50_changepoint.py",
+    "value": 5
+  },
+  "cp.headline.n_months": {
+    "recorded_at": "2026-10-10T01:00:12+00:00",
+    "source": "50_changepoint.py",
+    "value": 245
+  },
+  "cp.headline.n_pelt": {
+    "recorded_at": "2026-10-10T01:00:12+00:00",
+    "source": "50_changepoint.py",
+    "value": 5
+  },
+  "cp.headline.pelt_months": {
+    "recorded_at": "2026-10-10T01:00:12+00:00",
+    "source": "50_changepoint.py",
+    "value": "2007-05; 2009-01; 2010-03; 2016-02; 2020-11"
+  },
+  "cp.headline.pelt_rel_plant_months": {
+    "recorded_at": "2026-10-10T01:00:12+00:00",
+    "source": "50_changepoint.py",
+    "value": "-101; -81; -67; 4; 61"
+  },
+  "cp.headline.pelt_rel_release_months": {
+    "note": "months after (+) or before (-) 2015-08 for each PELT change-point",
+    "recorded_at": "2026-10-10T01:00:12+00:00",
+    "source": "50_changepoint.py",
+    "value": "-99; -79; -65; 6; 63"
+  },
+  "cp.headline.segment_means": {
+    "recorded_at": "2026-10-10T01:00:12+00:00",
+    "source": "50_changepoint.py",
+    "value": "-0.08; +0.25; -0.97; +0.23; -0.13; +0.00"
+  },
+  "cp.headline.strongest_month": {
+    "recorded_at": "2026-10-10T01:00:12+00:00",
+    "source": "50_changepoint.py",
+    "value": "2010-03"
+  },
+  "cp.headline.strongest_rel_plant_months": {
+    "recorded_at": "2026-10-10T01:00:12+00:00",
+    "source": "50_changepoint.py",
+    "value": -67
+  },
+  "cp.headline.strongest_rel_release_months": {
+    "recorded_at": "2026-10-10T01:00:12+00:00",
+    "source": "50_changepoint.py",
+    "value": -65
+  },
+  "cp.headline.strongest_within_3mo_of_release": {
+    "recorded_at": "2026-10-10T01:00:12+00:00",
+    "source": "50_changepoint.py",
+    "value": false
+  },
+  "cq.headline.amp1": {
+    "note": "annual harmonic amplitude, ln units",
+    "recorded_at": "2026-10-10T01:00:07+00:00",
+    "source": "30_cq.py",
+    "value": 0.088
+  },
+  "cq.headline.amp2": {
+    "recorded_at": "2026-10-10T01:00:07+00:00",
+    "source": "30_cq.py",
+    "value": 0.325
+  },
+  "cq.headline.estimable": {
+    "note": "passes the inclusion rule",
+    "recorded_at": "2026-10-10T01:00:07+00:00",
+    "source": "30_cq.py",
+    "value": true
+  },
+  "cq.headline.median_conc_post": {
+    "recorded_at": "2026-10-10T01:00:07+00:00",
+    "source": "30_cq.py",
+    "unit": "ug/L",
+    "value": 1652.0
+  },
+  "cq.headline.median_conc_pre": {
+    "recorded_at": "2026-10-10T01:00:07+00:00",
+    "source": "30_cq.py",
+    "unit": "ug/L",
+    "value": 2061.0
+  },
+  "cq.headline.median_q_post": {
+    "recorded_at": "2026-10-10T01:00:07+00:00",
+    "source": "30_cq.py",
+    "unit": "ft3/s",
+    "value": 15.2
+  },
+  "cq.headline.median_q_pre": {
+    "recorded_at": "2026-10-10T01:00:07+00:00",
+    "source": "30_cq.py",
+    "unit": "ft3/s",
+    "value": 18.6
+  },
+  "cq.headline.n_fit": {
+    "recorded_at": "2026-10-10T01:00:07+00:00",
+    "source": "30_cq.py",
+    "value": 123
+  },
+  "cq.headline.n_fit_censored": {
+    "recorded_at": "2026-10-10T01:00:07+00:00",
+    "source": "30_cq.py",
+    "value": 2
+  },
+  "cq.headline.n_post": {
+    "recorded_at": "2026-10-10T01:00:07+00:00",
+    "source": "30_cq.py",
+    "value": 122
+  },
+  "cq.headline.n_pre": {
+    "recorded_at": "2026-10-10T01:00:07+00:00",
+    "source": "30_cq.py",
+    "value": 123
+  },
+  "cq.headline.n_series_rows": {
+    "recorded_at": "2026-10-10T01:00:07+00:00",
+    "source": "30_cq.py",
+    "value": 247
+  },
+  "cq.headline.n_without_discharge": {
+    "recorded_at": "2026-10-10T01:00:07+00:00",
+    "source": "30_cq.py",
+    "value": 0
+  },
+  "cq.headline.resid_mean_post": {
+    "note": "raw post-period mean residual, before the ITS; descriptive only",
+    "recorded_at": "2026-10-10T01:00:07+00:00",
+    "source": "30_cq.py",
+    "value": -0.041
+  },
+  "cq.headline.resid_sd_post": {
+    "recorded_at": "2026-10-10T01:00:07+00:00",
+    "source": "30_cq.py",
+    "value": 0.324
+  },
+  "cq.headline.resid_sd_pre": {
+    "recorded_at": "2026-10-10T01:00:07+00:00",
+    "source": "30_cq.py",
+    "value": 0.921
+  },
+  "cq.headline.share_censored_pre": {
+    "recorded_at": "2026-10-10T01:00:07+00:00",
+    "source": "30_cq.py",
+    "value": 0.016
+  },
+  "cq.headline.sigma": {
+    "recorded_at": "2026-10-10T01:00:07+00:00",
+    "source": "30_cq.py",
+    "value": 0.932
+  },
+  "cq.headline.slope": {
+    "note": "d ln C / d ln Q, pre-period",
+    "recorded_at": "2026-10-10T01:00:07+00:00",
+    "source": "30_cq.py",
+    "value": -0.122
+  },
+  "cq.headline.slope_hi": {
+    "recorded_at": "2026-10-10T01:00:07+00:00",
+    "source": "30_cq.py",
+    "value": 0.256
+  },
+  "cq.headline.slope_lo": {
+    "recorded_at": "2026-10-10T01:00:07+00:00",
+    "source": "30_cq.py",
+    "value": -0.499
+  },
+  "cq.headline.slope_se": {
+    "recorded_at": "2026-10-10T01:00:07+00:00",
+    "source": "30_cq.py",
+    "value": 0.193
+  },
+  "did.below_silverton.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:16+00:00",
+    "source": "60_did.py",
+    "value": 0.0121
+  },
+  "did.below_silverton.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:16+00:00",
+    "source": "60_did.py",
+    "value": -20.0
+  },
+  "did.below_silverton.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:16+00:00",
+    "source": "60_did.py",
+    "value": -4.8
+  },
+  "did.below_silverton.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:16+00:00",
+    "source": "60_did.py",
+    "value": -32.8
+  },
+  "did.below_silverton.n_pairs": {
+    "recorded_at": "2026-10-10T01:00:16+00:00",
+    "source": "60_did.py",
+    "value": 210
+  },
+  "did.cells.n": {
+    "recorded_at": "2026-10-10T01:00:16+00:00",
+    "source": "60_did.py",
+    "value": 38
+  },
+  "did.cells.n_ci_excludes_zero": {
+    "recorded_at": "2026-10-10T01:00:16+00:00",
+    "source": "60_did.py",
+    "value": 4
+  },
+  "did.cells.n_negative": {
+    "recorded_at": "2026-10-10T01:00:16+00:00",
+    "source": "60_did.py",
+    "value": 27
+  },
+  "did.cells.n_not_estimable": {
+    "recorded_at": "2026-10-10T01:00:16+00:00",
+    "source": "60_did.py",
+    "value": 1
+  },
+  "did.control_zinc.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:16+00:00",
+    "source": "60_did.py",
+    "value": 0.0931
+  },
+  "did.control_zinc.level_change_pct": {
+    "note": "the upstream control's own ITS level change, dissolved zinc",
+    "recorded_at": "2026-10-10T01:00:16+00:00",
+    "source": "60_did.py",
+    "value": -21.1
+  },
+  "did.control_zinc.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:16+00:00",
+    "source": "60_did.py",
+    "value": 4.0
+  },
+  "did.control_zinc.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:16+00:00",
+    "source": "60_did.py",
+    "value": -40.2
+  },
+  "did.headline.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:16+00:00",
+    "source": "60_did.py",
+    "value": 0.0402
+  },
+  "did.headline.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:16+00:00",
+    "source": "60_did.py",
+    "value": -24.3
+  },
+  "did.headline.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:16+00:00",
+    "source": "60_did.py",
+    "value": -1.2
+  },
+  "did.headline.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:16+00:00",
+    "source": "60_did.py",
+    "value": -42.0
+  },
+  "did.headline.n_pairs": {
+    "note": "months with an uncensored residual at both Cement Creek and the control",
+    "recorded_at": "2026-10-10T01:00:16+00:00",
+    "source": "60_did.py",
+    "value": 234
+  },
+  "did.headline.share_months_paired": {
+    "recorded_at": "2026-10-10T01:00:16+00:00",
+    "source": "60_did.py",
+    "value": 0.963
+  },
+  "did.headline.slope_change_p": {
+    "recorded_at": "2026-10-10T01:00:16+00:00",
+    "source": "60_did.py",
+    "value": 0.0001
+  },
+  "did.headline.slope_change_per_yr": {
+    "recorded_at": "2026-10-10T01:00:16+00:00",
+    "source": "60_did.py",
+    "value": -0.0747
+  },
+  "explore.clean.control.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 0.2752
+  },
+  "explore.clean.control.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": -10.6
+  },
+  "explore.clean.control.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 9.3
+  },
+  "explore.clean.control.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": -26.8
+  },
+  "explore.clean.control.n_rows_removed": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 3
+  },
+  "explore.clean.control.sigma": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 0.335
+  },
+  "explore.clean.did.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 0.0303
+  },
+  "explore.clean.did.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": -23.0
+  },
+  "explore.clean.did.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": -2.5
+  },
+  "explore.clean.did.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": -39.2
+  },
+  "explore.clean.did.n_pairs": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 233
+  },
+  "explore.clean.did.slope_change_p": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 0.0008
+  },
+  "explore.clean.did.slope_change_per_yr": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": -0.0659
+  },
+  "explore.clean.grid.bh_sig_cells": {
+    "recorded_at": "2026-10-10T01:00:18+00:00",
+    "source": "70_exploratory.py",
+    "value": "none"
+  },
+  "explore.clean.grid.max_abs_shift_pct_points": {
+    "recorded_at": "2026-10-10T01:00:18+00:00",
+    "source": "70_exploratory.py",
+    "value": 43.7
+  },
+  "explore.clean.grid.median_pct": {
+    "recorded_at": "2026-10-10T01:00:18+00:00",
+    "source": "70_exploratory.py",
+    "value": -12.8
+  },
+  "explore.clean.grid.median_sigma_ratio": {
+    "note": "median ratio of the residual scale after to before removing implausible rows",
+    "recorded_at": "2026-10-10T01:00:18+00:00",
+    "source": "70_exploratory.py",
+    "value": 1.0
+  },
+  "explore.clean.grid.n_bh_sig": {
+    "recorded_at": "2026-10-10T01:00:18+00:00",
+    "source": "70_exploratory.py",
+    "value": 0
+  },
+  "explore.clean.grid.n_bh_sig_negative": {
+    "recorded_at": "2026-10-10T01:00:18+00:00",
+    "source": "70_exploratory.py",
+    "value": 0
+  },
+  "explore.clean.grid.n_cells": {
+    "recorded_at": "2026-10-10T01:00:18+00:00",
+    "source": "70_exploratory.py",
+    "value": 52
+  },
+  "explore.clean.grid.n_cells_with_removed": {
+    "recorded_at": "2026-10-10T01:00:18+00:00",
+    "source": "70_exploratory.py",
+    "value": 24
+  },
+  "explore.clean.grid.n_negative": {
+    "recorded_at": "2026-10-10T01:00:18+00:00",
+    "source": "70_exploratory.py",
+    "value": 44
+  },
+  "explore.clean.grid.n_raw_sig": {
+    "recorded_at": "2026-10-10T01:00:18+00:00",
+    "source": "70_exploratory.py",
+    "value": 9
+  },
+  "explore.clean.grid.n_rows_removed_total": {
+    "recorded_at": "2026-10-10T01:00:18+00:00",
+    "source": "70_exploratory.py",
+    "value": 74
+  },
+  "explore.clean.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 0.0021
+  },
+  "explore.clean.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": -24.4
+  },
+  "explore.clean.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": -9.7
+  },
+  "explore.clean.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": -36.7
+  },
+  "explore.clean.n_rows_removed": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 3
+  },
+  "explore.clean.pre_slope_pct_per_yr": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 0.96
+  },
+  "explore.clean.sigma": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 0.264
+  },
+  "explore.clean.slope_change_p": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 0.4304
+  },
+  "explore.clean.slope_change_per_yr": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": -0.0117
+  },
+  "explore.flow.corr_log": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 0.993
+  },
+  "explore.flow.median_abs_log_ratio": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 0.033
+  },
+  "explore.flow.n_orgs": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 5
+  },
+  "explore.flow.n_pairs": {
+    "note": "samples with an instantaneous discharge and a daily mean on the same day",
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 377
+  },
+  "explore.flow.p90_abs_log_ratio": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 0.156
+  },
+  "explore.halfrl.headline_diff_pct_points": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 0.71
+  },
+  "explore.halfrl.max_abs_diff_pct_points": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 45.2
+  },
+  "explore.halfrl.n_cells": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 52
+  },
+  "explore.pooled.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 0.0061
+  },
+  "explore.pooled.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": -39.7
+  },
+  "explore.pooled.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": -13.5
+  },
+  "explore.pooled.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": -58.0
+  },
+  "explore.pooled.n": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 340
+  },
+  "explore.pooled.n_orgs": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 6
+  },
+  "explore.pooled.n_post": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 189
+  },
+  "explore.pooled.n_pre": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 151
+  },
+  "explore.pooled.share_post_rows_non_riverwatch": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 0.354
+  },
+  "explore.usgs.estimable_by_rule": {
+    "note": "only 39 pre-period samples (< 60)",
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": false
+  },
+  "explore.usgs.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 0.2502
+  },
+  "explore.usgs.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": -3.7
+  },
+  "explore.usgs.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 2.7
+  },
+  "explore.usgs.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": -9.7
+  },
+  "explore.usgs.n_post": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 27
+  },
+  "explore.usgs.n_pre": {
+    "recorded_at": "2026-10-10T01:00:17+00:00",
+    "source": "70_exploratory.py",
+    "value": 39
+  },
+  "grid.n_ci_excludes_zero": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 14
+  },
+  "grid.n_fits": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 27
+  },
+  "grid.n_negative": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 15
+  },
+  "grid.pct_max": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 45.9
+  },
+  "grid.pct_min": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -26.4
+  },
+  "grid.pre2005.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.0845
+  },
+  "grid.pre2005.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -19.9
+  },
+  "grid.pre2005.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 3.1
+  },
+  "grid.pre2005.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -37.7
+  },
+  "grid.pre2005.n_pre": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 123
+  },
+  "grid.pre2005.pre_slope_pct_per_yr": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 3.05
+  },
+  "grid.pre2005.slope_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.1615
+  },
+  "grid.pre2005.slope_change_per_yr": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -0.0263
+  },
+  "grid.pre2005_plume20150819_post2016.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.061
+  },
+  "grid.pre2005_plume20150819_post2016.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 45.871
+  },
+  "grid.pre2005_plume20150819_post2016.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 116.436
+  },
+  "grid.pre2005_plume20150819_post2016.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -1.687
+  },
+  "grid.pre2005_plume20150819_post2016.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 139
+  },
+  "grid.pre2005_plume20150819_post2018.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.862
+  },
+  "grid.pre2005_plume20150819_post2018.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 3.383
+  },
+  "grid.pre2005_plume20150819_post2018.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 50.49
+  },
+  "grid.pre2005_plume20150819_post2018.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -28.979
+  },
+  "grid.pre2005_plume20150819_post2018.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 163
+  },
+  "grid.pre2005_plume20150819_post2025.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.145
+  },
+  "grid.pre2005_plume20150819_post2025.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -18.18
+  },
+  "grid.pre2005_plume20150819_post2025.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 7.186
+  },
+  "grid.pre2005_plume20150819_post2025.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -37.543
+  },
+  "grid.pre2005_plume20150819_post2025.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 246
+  },
+  "grid.pre2005_plume20150930_post2016.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.149
+  },
+  "grid.pre2005_plume20150930_post2016.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 41.195
+  },
+  "grid.pre2005_plume20150930_post2016.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 125.542
+  },
+  "grid.pre2005_plume20150930_post2016.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -11.609
+  },
+  "grid.pre2005_plume20150930_post2016.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 138
+  },
+  "grid.pre2005_plume20150930_post2018.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.946
+  },
+  "grid.pre2005_plume20150930_post2018.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -1.236
+  },
+  "grid.pre2005_plume20150930_post2018.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 41.417
+  },
+  "grid.pre2005_plume20150930_post2018.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -31.024
+  },
+  "grid.pre2005_plume20150930_post2018.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 162
+  },
+  "grid.pre2005_plume20150930_post2025.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.084
+  },
+  "grid.pre2005_plume20150930_post2025.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -19.897
+  },
+  "grid.pre2005_plume20150930_post2025.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 3.062
+  },
+  "grid.pre2005_plume20150930_post2025.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -37.741
+  },
+  "grid.pre2005_plume20150930_post2025.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 245
+  },
+  "grid.pre2005_plume20151231_post2016.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.407
+  },
+  "grid.pre2005_plume20151231_post2016.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -16.958
+  },
+  "grid.pre2005_plume20151231_post2016.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 28.894
+  },
+  "grid.pre2005_plume20151231_post2016.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -46.499
+  },
+  "grid.pre2005_plume20151231_post2016.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 135
+  },
+  "grid.pre2005_plume20151231_post2018.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.044
+  },
+  "grid.pre2005_plume20151231_post2018.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -20.904
+  },
+  "grid.pre2005_plume20151231_post2018.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -0.653
+  },
+  "grid.pre2005_plume20151231_post2018.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -37.026
+  },
+  "grid.pre2005_plume20151231_post2018.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 159
+  },
+  "grid.pre2005_plume20151231_post2025.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.003
+  },
+  "grid.pre2005_plume20151231_post2025.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -25.754
+  },
+  "grid.pre2005_plume20151231_post2025.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -9.443
+  },
+  "grid.pre2005_plume20151231_post2025.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -39.127
+  },
+  "grid.pre2005_plume20151231_post2025.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 242
+  },
+  "grid.pre2010.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.0025
+  },
+  "grid.pre2010.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -19.1
+  },
+  "grid.pre2010.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -7.2
+  },
+  "grid.pre2010.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -29.4
+  },
+  "grid.pre2010.n_pre": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 64
+  },
+  "grid.pre2010.pre_slope_pct_per_yr": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -1.67
+  },
+  "grid.pre2010.slope_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.2828
+  },
+  "grid.pre2010.slope_change_per_yr": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.0151
+  },
+  "grid.pre2010_plume20150819_post2016.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.0
+  },
+  "grid.pre2010_plume20150819_post2016.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 43.521
+  },
+  "grid.pre2010_plume20150819_post2016.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 69.018
+  },
+  "grid.pre2010_plume20150819_post2016.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 21.871
+  },
+  "grid.pre2010_plume20150819_post2016.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 80
+  },
+  "grid.pre2010_plume20150819_post2018.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.279
+  },
+  "grid.pre2010_plume20150819_post2018.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 10.344
+  },
+  "grid.pre2010_plume20150819_post2018.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 31.87
+  },
+  "grid.pre2010_plume20150819_post2018.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -7.669
+  },
+  "grid.pre2010_plume20150819_post2018.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 104
+  },
+  "grid.pre2010_plume20150819_post2025.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.028
+  },
+  "grid.pre2010_plume20150819_post2025.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -16.766
+  },
+  "grid.pre2010_plume20150819_post2025.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -2.013
+  },
+  "grid.pre2010_plume20150819_post2025.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -29.298
+  },
+  "grid.pre2010_plume20150819_post2025.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 187
+  },
+  "grid.pre2010_plume20150930_post2016.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.0
+  },
+  "grid.pre2010_plume20150930_post2016.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 28.654
+  },
+  "grid.pre2010_plume20150930_post2016.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 43.882
+  },
+  "grid.pre2010_plume20150930_post2016.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 15.038
+  },
+  "grid.pre2010_plume20150930_post2016.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 79
+  },
+  "grid.pre2010_plume20150930_post2018.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.576
+  },
+  "grid.pre2010_plume20150930_post2018.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 3.593
+  },
+  "grid.pre2010_plume20150930_post2018.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 17.253
+  },
+  "grid.pre2010_plume20150930_post2018.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -8.475
+  },
+  "grid.pre2010_plume20150930_post2018.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 103
+  },
+  "grid.pre2010_plume20150930_post2025.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.002
+  },
+  "grid.pre2010_plume20150930_post2025.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -19.06
+  },
+  "grid.pre2010_plume20150930_post2025.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -7.192
+  },
+  "grid.pre2010_plume20150930_post2025.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -29.411
+  },
+  "grid.pre2010_plume20150930_post2025.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 186
+  },
+  "grid.pre2010_plume20151231_post2016.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.01
+  },
+  "grid.pre2010_plume20151231_post2016.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 15.882
+  },
+  "grid.pre2010_plume20151231_post2016.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 29.688
+  },
+  "grid.pre2010_plume20151231_post2016.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 3.546
+  },
+  "grid.pre2010_plume20151231_post2016.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 76
+  },
+  "grid.pre2010_plume20151231_post2018.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.255
+  },
+  "grid.pre2010_plume20151231_post2018.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -4.365
+  },
+  "grid.pre2010_plume20151231_post2018.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 3.28
+  },
+  "grid.pre2010_plume20151231_post2018.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -11.444
+  },
+  "grid.pre2010_plume20151231_post2018.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 100
+  },
+  "grid.pre2010_plume20151231_post2025.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.0
+  },
+  "grid.pre2010_plume20151231_post2025.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -22.453
+  },
+  "grid.pre2010_plume20151231_post2025.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -13.653
+  },
+  "grid.pre2010_plume20151231_post2025.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -30.357
+  },
+  "grid.pre2010_plume20151231_post2025.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 183
+  },
+  "grid.pre2013.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.0005
+  },
+  "grid.pre2013.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -23.3
+  },
+  "grid.pre2013.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -11.0
+  },
+  "grid.pre2013.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -33.9
+  },
+  "grid.pre2013.n_pre": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 31
+  },
+  "grid.pre2013.pre_slope_pct_per_yr": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 2.17
+  },
+  "grid.pre2013.slope_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.1401
+  },
+  "grid.pre2013.slope_change_per_yr": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -0.0242
+  },
+  "grid.pre2013_plume20150819_post2016.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.001
+  },
+  "grid.pre2013_plume20150819_post2016.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 36.069
+  },
+  "grid.pre2013_plume20150819_post2016.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 62.161
+  },
+  "grid.pre2013_plume20150819_post2016.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 14.176
+  },
+  "grid.pre2013_plume20150819_post2016.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 47
+  },
+  "grid.pre2013_plume20150819_post2018.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.58
+  },
+  "grid.pre2013_plume20150819_post2018.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 5.394
+  },
+  "grid.pre2013_plume20150819_post2018.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 26.934
+  },
+  "grid.pre2013_plume20150819_post2018.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -12.49
+  },
+  "grid.pre2013_plume20150819_post2018.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 71
+  },
+  "grid.pre2013_plume20150819_post2025.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.008
+  },
+  "grid.pre2013_plume20150819_post2025.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -21.094
+  },
+  "grid.pre2013_plume20150819_post2025.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -5.957
+  },
+  "grid.pre2013_plume20150819_post2025.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -33.795
+  },
+  "grid.pre2013_plume20150819_post2025.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 154
+  },
+  "grid.pre2013_plume20150930_post2016.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.001
+  },
+  "grid.pre2013_plume20150930_post2016.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 21.707
+  },
+  "grid.pre2013_plume20150930_post2016.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 37.076
+  },
+  "grid.pre2013_plume20150930_post2016.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 8.061
+  },
+  "grid.pre2013_plume20150930_post2016.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 46
+  },
+  "grid.pre2013_plume20150930_post2018.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.874
+  },
+  "grid.pre2013_plume20150930_post2018.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -1.051
+  },
+  "grid.pre2013_plume20150930_post2018.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 12.77
+  },
+  "grid.pre2013_plume20150930_post2018.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -13.178
+  },
+  "grid.pre2013_plume20150930_post2018.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 70
+  },
+  "grid.pre2013_plume20150930_post2025.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.0
+  },
+  "grid.pre2013_plume20150930_post2025.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -23.287
+  },
+  "grid.pre2013_plume20150930_post2025.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -11.002
+  },
+  "grid.pre2013_plume20150930_post2025.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -33.877
+  },
+  "grid.pre2013_plume20150930_post2025.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 153
+  },
+  "grid.pre2013_plume20151231_post2016.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.065
+  },
+  "grid.pre2013_plume20151231_post2016.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 11.112
+  },
+  "grid.pre2013_plume20151231_post2016.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 24.295
+  },
+  "grid.pre2013_plume20151231_post2016.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -0.673
+  },
+  "grid.pre2013_plume20151231_post2016.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 43
+  },
+  "grid.pre2013_plume20151231_post2018.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.049
+  },
+  "grid.pre2013_plume20151231_post2018.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -8.076
+  },
+  "grid.pre2013_plume20151231_post2018.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -0.041
+  },
+  "grid.pre2013_plume20151231_post2018.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -15.464
+  },
+  "grid.pre2013_plume20151231_post2018.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 67
+  },
+  "grid.pre2013_plume20151231_post2025.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 0.0
+  },
+  "grid.pre2013_plume20151231_post2025.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -26.436
+  },
+  "grid.pre2013_plume20151231_post2025.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -17.166
+  },
+  "grid.pre2013_plume20151231_post2025.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": -34.668
+  },
+  "grid.pre2013_plume20151231_post2025.n": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": 150
+  },
+  "its.headline.all_pre_starts_agree": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "its.headline.change_at_end_pct": {
+    "note": "level change plus slope change accumulated to the end of the post-period, point estimate only",
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": -39.1
+  },
+  "its.headline.converged": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "its.headline.hac_lags": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 12
+  },
+  "its.headline.level_change_hi": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 0.0302
+  },
+  "its.headline.level_change_lo": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": -0.4739
+  },
+  "its.headline.level_change_log": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": -0.2219
+  },
+  "its.headline.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 0.0845
+  },
+  "its.headline.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": -19.8967
+  },
+  "its.headline.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 3.0624
+  },
+  "its.headline.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": -37.7412
+  },
+  "its.headline.level_change_se": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 0.1286
+  },
+  "its.headline.n": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 245
+  },
+  "its.headline.n_censored": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 2
+  },
+  "its.headline.n_post": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 122
+  },
+  "its.headline.n_pre": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 123
+  },
+  "its.headline.pre_slope_pct_per_yr": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 3.05
+  },
+  "its.headline.pre_slope_pct_per_yr_hi": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 6.12
+  },
+  "its.headline.pre_slope_pct_per_yr_lo": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 0.07
+  },
+  "its.headline.pre_slope_per_yr": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 0.0301
+  },
+  "its.headline.pre_slope_se": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 0.015
+  },
+  "its.headline.primary_ci_excludes_zero": {
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "its.headline.sigma": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 0.6911
+  },
+  "its.headline.slope_change_hi": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 0.0105
+  },
+  "its.headline.slope_change_lo": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": -0.0631
+  },
+  "its.headline.slope_change_p": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 0.1615
+  },
+  "its.headline.slope_change_pct_per_yr": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": -2.6
+  },
+  "its.headline.slope_change_per_yr": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": -0.0263
+  },
+  "its.headline.verdict": {
+    "note": "pre-registered rule 1-3 applied to the primary fit and the three pre-period starts",
+    "recorded_at": "2026-10-10T01:00:09+00:00",
+    "source": "40_its.py",
+    "value": "no detectable lasting change"
+  },
+  "its.headline.years_post": {
+    "recorded_at": "2026-10-10T01:00:08+00:00",
+    "source": "40_its.py",
+    "value": 10.4
+  },
+  "mult.animas_above_cement.aluminium.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_above_cement.aluminium.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_above_cement.aluminium.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.2967
+  },
+  "mult.animas_above_cement.aluminium.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -10.7
+  },
+  "mult.animas_above_cement.aluminium.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 10.5
+  },
+  "mult.animas_above_cement.aluminium.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -27.9
+  },
+  "mult.animas_above_cement.aluminium.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 12
+  },
+  "mult.animas_above_cement.aluminium.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_above_cement.aluminium.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_above_cement.aluminium.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.0501
+  },
+  "mult.animas_above_cement.aluminium.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -32.7
+  },
+  "mult.animas_above_cement.aluminium.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.0
+  },
+  "mult.animas_above_cement.aluminium.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -54.7
+  },
+  "mult.animas_above_cement.aluminium.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 14
+  },
+  "mult.animas_above_cement.arsenic.dissolved.estimable": {
+    "note": "95% of pre-period rows censored (> 50%)",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_above_cement.arsenic.total.estimable": {
+    "note": "92% of pre-period rows censored (> 50%)",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_above_cement.cadmium.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_above_cement.cadmium.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_above_cement.cadmium.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.1392
+  },
+  "mult.animas_above_cement.cadmium.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -17.6
+  },
+  "mult.animas_above_cement.cadmium.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 6.5
+  },
+  "mult.animas_above_cement.cadmium.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -36.2
+  },
+  "mult.animas_above_cement.cadmium.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 17
+  },
+  "mult.animas_above_cement.cadmium.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_above_cement.cadmium.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_above_cement.cadmium.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.2513
+  },
+  "mult.animas_above_cement.cadmium.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -13.8
+  },
+  "mult.animas_above_cement.cadmium.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 11.1
+  },
+  "mult.animas_above_cement.cadmium.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -33.2
+  },
+  "mult.animas_above_cement.cadmium.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 16
+  },
+  "mult.animas_above_cement.copper.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_above_cement.copper.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_above_cement.copper.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.1571
+  },
+  "mult.animas_above_cement.copper.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -24.3
+  },
+  "mult.animas_above_cement.copper.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 11.3
+  },
+  "mult.animas_above_cement.copper.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -48.5
+  },
+  "mult.animas_above_cement.copper.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 17
+  },
+  "mult.animas_above_cement.copper.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_above_cement.copper.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_above_cement.copper.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.043
+  },
+  "mult.animas_above_cement.copper.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -33.1
+  },
+  "mult.animas_above_cement.copper.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -1.3
+  },
+  "mult.animas_above_cement.copper.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -54.7
+  },
+  "mult.animas_above_cement.copper.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 7
+  },
+  "mult.animas_above_cement.iron.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_above_cement.iron.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_above_cement.iron.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.8148
+  },
+  "mult.animas_above_cement.iron.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -5.3
+  },
+  "mult.animas_above_cement.iron.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 49.8
+  },
+  "mult.animas_above_cement.iron.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -40.2
+  },
+  "mult.animas_above_cement.iron.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 17
+  },
+  "mult.animas_above_cement.iron.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_above_cement.iron.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_above_cement.iron.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.3569
+  },
+  "mult.animas_above_cement.iron.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -16.8
+  },
+  "mult.animas_above_cement.iron.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 23.0
+  },
+  "mult.animas_above_cement.iron.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -43.7
+  },
+  "mult.animas_above_cement.iron.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 10
+  },
+  "mult.animas_above_cement.lead.dissolved.estimable": {
+    "note": "76% of pre-period rows censored (> 50%)",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_above_cement.lead.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_above_cement.lead.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_above_cement.lead.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.4836
+  },
+  "mult.animas_above_cement.lead.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -16.2
+  },
+  "mult.animas_above_cement.lead.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 37.5
+  },
+  "mult.animas_above_cement.lead.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -48.9
+  },
+  "mult.animas_above_cement.lead.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 48
+  },
+  "mult.animas_above_cement.manganese.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_above_cement.manganese.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_above_cement.manganese.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.5607
+  },
+  "mult.animas_above_cement.manganese.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -8.8
+  },
+  "mult.animas_above_cement.manganese.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 24.3
+  },
+  "mult.animas_above_cement.manganese.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -33.1
+  },
+  "mult.animas_above_cement.manganese.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 9
+  },
+  "mult.animas_above_cement.manganese.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_above_cement.manganese.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_above_cement.manganese.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.3591
+  },
+  "mult.animas_above_cement.manganese.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -13.8
+  },
+  "mult.animas_above_cement.manganese.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 18.4
+  },
+  "mult.animas_above_cement.manganese.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -37.3
+  },
+  "mult.animas_above_cement.manganese.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 10
+  },
+  "mult.animas_above_cement.median_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -16.8
+  },
+  "mult.animas_above_cement.n_bh_sig": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0
+  },
+  "mult.animas_above_cement.n_estimable": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 13
+  },
+  "mult.animas_above_cement.n_negative": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 13
+  },
+  "mult.animas_above_cement.zinc.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_above_cement.zinc.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_above_cement.zinc.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.0931
+  },
+  "mult.animas_above_cement.zinc.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -21.1
+  },
+  "mult.animas_above_cement.zinc.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 4.0
+  },
+  "mult.animas_above_cement.zinc.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -40.2
+  },
+  "mult.animas_above_cement.zinc.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 14
+  },
+  "mult.animas_above_cement.zinc.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_above_cement.zinc.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_above_cement.zinc.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.0601
+  },
+  "mult.animas_above_cement.zinc.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -21.9
+  },
+  "mult.animas_above_cement.zinc.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 1.1
+  },
+  "mult.animas_above_cement.zinc.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -39.7
+  },
+  "mult.animas_above_cement.zinc.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 12
+  },
+  "mult.animas_below_silverton.aluminium.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_below_silverton.aluminium.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_below_silverton.aluminium.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.1249
+  },
+  "mult.animas_below_silverton.aluminium.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -28.3
+  },
+  "mult.animas_below_silverton.aluminium.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 9.7
+  },
+  "mult.animas_below_silverton.aluminium.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -53.2
+  },
+  "mult.animas_below_silverton.aluminium.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 9
+  },
+  "mult.animas_below_silverton.aluminium.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_below_silverton.aluminium.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_below_silverton.aluminium.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.1651
+  },
+  "mult.animas_below_silverton.aluminium.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -36.3
+  },
+  "mult.animas_below_silverton.aluminium.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 20.4
+  },
+  "mult.animas_below_silverton.aluminium.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -66.3
+  },
+  "mult.animas_below_silverton.aluminium.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 3
+  },
+  "mult.animas_below_silverton.arsenic.dissolved.estimable": {
+    "note": "99% of pre-period rows censored (> 50%)",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_below_silverton.arsenic.total.estimable": {
+    "note": "93% of pre-period rows censored (> 50%)",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_below_silverton.cadmium.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_below_silverton.cadmium.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_below_silverton.cadmium.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.0115
+  },
+  "mult.animas_below_silverton.cadmium.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -17.6
+  },
+  "mult.animas_below_silverton.cadmium.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -4.3
+  },
+  "mult.animas_below_silverton.cadmium.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -29.1
+  },
+  "mult.animas_below_silverton.cadmium.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 11
+  },
+  "mult.animas_below_silverton.cadmium.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_below_silverton.cadmium.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_below_silverton.cadmium.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.6583
+  },
+  "mult.animas_below_silverton.cadmium.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -4.5
+  },
+  "mult.animas_below_silverton.cadmium.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 17.0
+  },
+  "mult.animas_below_silverton.cadmium.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -22.0
+  },
+  "mult.animas_below_silverton.cadmium.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 12
+  },
+  "mult.animas_below_silverton.copper.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_below_silverton.copper.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_below_silverton.copper.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.6493
+  },
+  "mult.animas_below_silverton.copper.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -8.1
+  },
+  "mult.animas_below_silverton.copper.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 32.3
+  },
+  "mult.animas_below_silverton.copper.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -36.2
+  },
+  "mult.animas_below_silverton.copper.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 10
+  },
+  "mult.animas_below_silverton.copper.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_below_silverton.copper.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_below_silverton.copper.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.6707
+  },
+  "mult.animas_below_silverton.copper.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 8.8
+  },
+  "mult.animas_below_silverton.copper.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 60.3
+  },
+  "mult.animas_below_silverton.copper.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -26.2
+  },
+  "mult.animas_below_silverton.copper.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 7
+  },
+  "mult.animas_below_silverton.iron.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_below_silverton.iron.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_below_silverton.iron.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.0251
+  },
+  "mult.animas_below_silverton.iron.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -41.3
+  },
+  "mult.animas_below_silverton.iron.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -6.5
+  },
+  "mult.animas_below_silverton.iron.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -63.2
+  },
+  "mult.animas_below_silverton.iron.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 9
+  },
+  "mult.animas_below_silverton.iron.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_below_silverton.iron.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_below_silverton.iron.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.359
+  },
+  "mult.animas_below_silverton.iron.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -23.4
+  },
+  "mult.animas_below_silverton.iron.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 35.4
+  },
+  "mult.animas_below_silverton.iron.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -56.7
+  },
+  "mult.animas_below_silverton.iron.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 7
+  },
+  "mult.animas_below_silverton.lead.dissolved.estimable": {
+    "note": "69% of pre-period rows censored (> 50%)",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_below_silverton.lead.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_below_silverton.lead.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_below_silverton.lead.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.9332
+  },
+  "mult.animas_below_silverton.lead.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -1.4
+  },
+  "mult.animas_below_silverton.lead.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 37.5
+  },
+  "mult.animas_below_silverton.lead.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -29.3
+  },
+  "mult.animas_below_silverton.lead.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 15
+  },
+  "mult.animas_below_silverton.manganese.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_below_silverton.manganese.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_below_silverton.manganese.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.3989
+  },
+  "mult.animas_below_silverton.manganese.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -14.1
+  },
+  "mult.animas_below_silverton.manganese.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 22.2
+  },
+  "mult.animas_below_silverton.manganese.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -39.5
+  },
+  "mult.animas_below_silverton.manganese.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 10
+  },
+  "mult.animas_below_silverton.manganese.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_below_silverton.manganese.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_below_silverton.manganese.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.9488
+  },
+  "mult.animas_below_silverton.manganese.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -0.8
+  },
+  "mult.animas_below_silverton.manganese.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 25.9
+  },
+  "mult.animas_below_silverton.manganese.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -21.8
+  },
+  "mult.animas_below_silverton.manganese.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 10
+  },
+  "mult.animas_below_silverton.median_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -14.1
+  },
+  "mult.animas_below_silverton.n_bh_sig": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0
+  },
+  "mult.animas_below_silverton.n_estimable": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 13
+  },
+  "mult.animas_below_silverton.n_negative": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 12
+  },
+  "mult.animas_below_silverton.zinc.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_below_silverton.zinc.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_below_silverton.zinc.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.0395
+  },
+  "mult.animas_below_silverton.zinc.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -23.3
+  },
+  "mult.animas_below_silverton.zinc.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -1.3
+  },
+  "mult.animas_below_silverton.zinc.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -40.5
+  },
+  "mult.animas_below_silverton.zinc.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 5
+  },
+  "mult.animas_below_silverton.zinc.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_below_silverton.zinc.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_below_silverton.zinc.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.0682
+  },
+  "mult.animas_below_silverton.zinc.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -10.0
+  },
+  "mult.animas_below_silverton.zinc.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.8
+  },
+  "mult.animas_below_silverton.zinc.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -19.7
+  },
+  "mult.animas_below_silverton.zinc.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 12
+  },
+  "mult.animas_durango.aluminium.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_durango.aluminium.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_durango.aluminium.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 0.4459
+  },
+  "mult.animas_durango.aluminium.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": -17.5
+  },
+  "mult.animas_durango.aluminium.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 35.3
+  },
+  "mult.animas_durango.aluminium.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": -49.7
+  },
+  "mult.animas_durango.aluminium.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 34
+  },
+  "mult.animas_durango.aluminium.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_durango.aluminium.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_durango.aluminium.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 0.2014
+  },
+  "mult.animas_durango.aluminium.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": -36.2
+  },
+  "mult.animas_durango.aluminium.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 27.2
+  },
+  "mult.animas_durango.aluminium.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": -68.0
+  },
+  "mult.animas_durango.aluminium.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 17
+  },
+  "mult.animas_durango.arsenic.dissolved.estimable": {
+    "note": "97% of pre-period rows censored (> 50%)",
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_durango.arsenic.total.estimable": {
+    "note": "96% of pre-period rows censored (> 50%)",
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_durango.cadmium.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_durango.cadmium.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_durango.cadmium.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 0.2415
+  },
+  "mult.animas_durango.cadmium.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 11.8
+  },
+  "mult.animas_durango.cadmium.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 34.6
+  },
+  "mult.animas_durango.cadmium.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": -7.2
+  },
+  "mult.animas_durango.cadmium.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 43
+  },
+  "mult.animas_durango.cadmium.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_durango.cadmium.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_durango.cadmium.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 0.1874
+  },
+  "mult.animas_durango.cadmium.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": -16.2
+  },
+  "mult.animas_durango.cadmium.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 9.0
+  },
+  "mult.animas_durango.cadmium.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": -35.6
+  },
+  "mult.animas_durango.cadmium.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 15
+  },
+  "mult.animas_durango.copper.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_durango.copper.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_durango.copper.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.1582
+  },
+  "mult.animas_durango.copper.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 67.5
+  },
+  "mult.animas_durango.copper.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 243.0
+  },
+  "mult.animas_durango.copper.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -18.2
+  },
+  "mult.animas_durango.copper.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 42
+  },
+  "mult.animas_durango.copper.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_durango.copper.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_durango.copper.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.6422
+  },
+  "mult.animas_durango.copper.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 18.0
+  },
+  "mult.animas_durango.copper.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 137.3
+  },
+  "mult.animas_durango.copper.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -41.3
+  },
+  "mult.animas_durango.copper.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 25
+  },
+  "mult.animas_durango.iron.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_durango.iron.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_durango.iron.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 0.5659
+  },
+  "mult.animas_durango.iron.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": -12.5
+  },
+  "mult.animas_durango.iron.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 38.1
+  },
+  "mult.animas_durango.iron.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": -44.6
+  },
+  "mult.animas_durango.iron.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 18
+  },
+  "mult.animas_durango.iron.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_durango.iron.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_durango.iron.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 0.1541
+  },
+  "mult.animas_durango.iron.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": -35.3
+  },
+  "mult.animas_durango.iron.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 17.8
+  },
+  "mult.animas_durango.iron.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": -64.5
+  },
+  "mult.animas_durango.iron.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 11
+  },
+  "mult.animas_durango.lead.dissolved.estimable": {
+    "note": "82% of pre-period rows censored (> 50%)",
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_durango.lead.total.estimable": {
+    "note": "51% of pre-period rows censored (> 50%)",
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_durango.manganese.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_durango.manganese.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_durango.manganese.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 0.8468
+  },
+  "mult.animas_durango.manganese.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": -2.8
+  },
+  "mult.animas_durango.manganese.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 29.6
+  },
+  "mult.animas_durango.manganese.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": -27.1
+  },
+  "mult.animas_durango.manganese.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 14
+  },
+  "mult.animas_durango.manganese.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_durango.manganese.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_durango.manganese.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 0.4946
+  },
+  "mult.animas_durango.manganese.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": -10.1
+  },
+  "mult.animas_durango.manganese.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 22.0
+  },
+  "mult.animas_durango.manganese.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": -33.8
+  },
+  "mult.animas_durango.manganese.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:11+00:00",
+    "source": "40_its.py",
+    "value": 11
+  },
+  "mult.animas_durango.median_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -14.4
+  },
+  "mult.animas_durango.n_bh_sig": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0
+  },
+  "mult.animas_durango.n_estimable": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 12
+  },
+  "mult.animas_durango.n_negative": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 9
+  },
+  "mult.animas_durango.zinc.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_durango.zinc.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_durango.zinc.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.0094
+  },
+  "mult.animas_durango.zinc.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -40.8
+  },
+  "mult.animas_durango.zinc.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -12.1
+  },
+  "mult.animas_durango.zinc.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -60.2
+  },
+  "mult.animas_durango.zinc.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 11
+  },
+  "mult.animas_durango.zinc.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.animas_durango.zinc.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.animas_durango.zinc.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.0138
+  },
+  "mult.animas_durango.zinc.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -37.8
+  },
+  "mult.animas_durango.zinc.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -9.2
+  },
+  "mult.animas_durango.zinc.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -57.3
+  },
+  "mult.animas_durango.zinc.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 9
+  },
+  "mult.cement_creek.aluminium.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.cement_creek.aluminium.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.cement_creek.aluminium.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.4618
+  },
+  "mult.cement_creek.aluminium.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 30.3
+  },
+  "mult.cement_creek.aluminium.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 163.4
+  },
+  "mult.cement_creek.aluminium.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -35.6
+  },
+  "mult.cement_creek.aluminium.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 17
+  },
+  "mult.cement_creek.aluminium.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.cement_creek.aluminium.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.cement_creek.aluminium.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.7618
+  },
+  "mult.cement_creek.aluminium.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 4.9
+  },
+  "mult.cement_creek.aluminium.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 42.7
+  },
+  "mult.cement_creek.aluminium.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -22.9
+  },
+  "mult.cement_creek.aluminium.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 13
+  },
+  "mult.cement_creek.arsenic.dissolved.estimable": {
+    "note": "98% of pre-period rows censored (> 50%)",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.cement_creek.arsenic.total.estimable": {
+    "note": "93% of pre-period rows censored (> 50%)",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.cement_creek.cadmium.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.cement_creek.cadmium.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.cement_creek.cadmium.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.0457
+  },
+  "mult.cement_creek.cadmium.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -24.4
+  },
+  "mult.cement_creek.cadmium.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -0.5
+  },
+  "mult.cement_creek.cadmium.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -42.5
+  },
+  "mult.cement_creek.cadmium.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 18
+  },
+  "mult.cement_creek.cadmium.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.cement_creek.cadmium.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.cement_creek.cadmium.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.1036
+  },
+  "mult.cement_creek.cadmium.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -19.5
+  },
+  "mult.cement_creek.cadmium.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 4.5
+  },
+  "mult.cement_creek.cadmium.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -38.0
+  },
+  "mult.cement_creek.cadmium.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 17
+  },
+  "mult.cement_creek.copper.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.cement_creek.copper.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.cement_creek.copper.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.5335
+  },
+  "mult.cement_creek.copper.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -13.2
+  },
+  "mult.cement_creek.copper.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 35.6
+  },
+  "mult.cement_creek.copper.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -44.4
+  },
+  "mult.cement_creek.copper.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 7
+  },
+  "mult.cement_creek.copper.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.cement_creek.copper.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.cement_creek.copper.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.9906
+  },
+  "mult.cement_creek.copper.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -0.2
+  },
+  "mult.cement_creek.copper.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 44.0
+  },
+  "mult.cement_creek.copper.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -30.8
+  },
+  "mult.cement_creek.copper.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 11
+  },
+  "mult.cement_creek.iron.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.cement_creek.iron.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.cement_creek.iron.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.0813
+  },
+  "mult.cement_creek.iron.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -53.0
+  },
+  "mult.cement_creek.iron.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 9.8
+  },
+  "mult.cement_creek.iron.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -79.9
+  },
+  "mult.cement_creek.iron.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 10
+  },
+  "mult.cement_creek.iron.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.cement_creek.iron.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.cement_creek.iron.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.3212
+  },
+  "mult.cement_creek.iron.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -28.4
+  },
+  "mult.cement_creek.iron.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 38.6
+  },
+  "mult.cement_creek.iron.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -63.1
+  },
+  "mult.cement_creek.iron.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 10
+  },
+  "mult.cement_creek.lead.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.cement_creek.lead.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.cement_creek.lead.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.0625
+  },
+  "mult.cement_creek.lead.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -17.9
+  },
+  "mult.cement_creek.lead.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 1.0
+  },
+  "mult.cement_creek.lead.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -33.3
+  },
+  "mult.cement_creek.lead.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 10
+  },
+  "mult.cement_creek.lead.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.cement_creek.lead.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.cement_creek.lead.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.8388
+  },
+  "mult.cement_creek.lead.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 2.8
+  },
+  "mult.cement_creek.lead.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 33.6
+  },
+  "mult.cement_creek.lead.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -20.9
+  },
+  "mult.cement_creek.lead.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 6
+  },
+  "mult.cement_creek.manganese.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.cement_creek.manganese.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.cement_creek.manganese.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.3499
+  },
+  "mult.cement_creek.manganese.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 10.8
+  },
+  "mult.cement_creek.manganese.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 37.6
+  },
+  "mult.cement_creek.manganese.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -10.7
+  },
+  "mult.cement_creek.manganese.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 18
+  },
+  "mult.cement_creek.manganese.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.cement_creek.manganese.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.cement_creek.manganese.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.0943
+  },
+  "mult.cement_creek.manganese.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 16.2
+  },
+  "mult.cement_creek.manganese.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 38.5
+  },
+  "mult.cement_creek.manganese.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -2.5
+  },
+  "mult.cement_creek.manganese.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 5
+  },
+  "mult.cement_creek.median_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -13.9
+  },
+  "mult.cement_creek.n_bh_sig": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0
+  },
+  "mult.cement_creek.n_estimable": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 14
+  },
+  "mult.cement_creek.n_negative": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 9
+  },
+  "mult.cement_creek.zinc.dissolved.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.cement_creek.zinc.dissolved.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.cement_creek.zinc.dissolved.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.0845
+  },
+  "mult.cement_creek.zinc.dissolved.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -19.9
+  },
+  "mult.cement_creek.zinc.dissolved.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 3.1
+  },
+  "mult.cement_creek.zinc.dissolved.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -37.7
+  },
+  "mult.cement_creek.zinc.dissolved.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 14
+  },
+  "mult.cement_creek.zinc.total.bh_reject": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": false
+  },
+  "mult.cement_creek.zinc.total.estimable": {
+    "note": "",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": true
+  },
+  "mult.cement_creek.zinc.total.level_change_p": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0.1602
+  },
+  "mult.cement_creek.zinc.total.level_change_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -14.7
+  },
+  "mult.cement_creek.zinc.total.level_change_pct_hi": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 6.5
+  },
+  "mult.cement_creek.zinc.total.level_change_pct_lo": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -31.6
+  },
+  "mult.cement_creek.zinc.total.n_rl_imputed": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 12
+  },
+  "mult.median_pct": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": -15.5
+  },
+  "mult.n_bh_sig": {
+    "note": "Benjamini-Hochberg at 5% FDR among estimable cells",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0
+  },
+  "mult.n_bh_sig_negative": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0
+  },
+  "mult.n_bh_sig_positive": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 0
+  },
+  "mult.n_cells": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 64
+  },
+  "mult.n_censoring_excluded": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 12
+  },
+  "mult.n_estimable": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 52
+  },
+  "mult.n_negative_point": {
+    "note": "estimable cells with a negative point estimate",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 43
+  },
+  "mult.n_not_estimable": {
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 12
+  },
+  "mult.n_raw_sig": {
+    "note": "raw p < 0.05 among estimable cells",
+    "recorded_at": "2026-10-10T01:00:10+00:00",
+    "source": "40_its.py",
+    "value": 7
+  },
   "prepare.daily_rows": {
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:03+00:00",
     "source": "10_prepare.py",
     "value": 39751
   },
   "prepare.excl.E01_media": {
     "note": "ActivityMediaName must be Water (sediment, soil, tissue, pore water out)",
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:04+00:00",
     "source": "10_prepare.py",
     "unit": "rows",
     "value": 1534
   },
   "prepare.excl.E02_characteristic": {
     "note": "CharacteristicName in the requested list",
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:04+00:00",
     "source": "10_prepare.py",
     "unit": "rows",
     "value": 0
   },
   "prepare.excl.E03_qc": {
     "note": "Quality-control activities go to qc_samples.csv, not the sample table",
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:04+00:00",
     "source": "10_prepare.py",
     "unit": "rows",
     "value": 602
   },
   "prepare.excl.E04_activity_type": {
     "note": "ActivityTypeCode must be a routine sample or field measurement",
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:04+00:00",
     "source": "10_prepare.py",
     "unit": "rows",
     "value": 5016
   },
   "prepare.excl.E05_flow": {
     "note": "Instantaneous discharge rows go to sample_flow.csv",
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:04+00:00",
     "source": "10_prepare.py",
     "unit": "rows",
     "value": 4005
   },
   "prepare.excl.E06_fraction": {
     "note": "Metal rows need a dissolved or total/recoverable fraction label",
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:04+00:00",
     "source": "10_prepare.py",
     "unit": "rows",
     "value": 426
   },
   "prepare.excl.E07_not_reported": {
     "note": "ResultDetectionConditionText 'Not Reported' carries no value",
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:04+00:00",
     "source": "10_prepare.py",
     "unit": "rows",
     "value": 182
   },
   "prepare.excl.E08_unit": {
     "note": "Result (or limit, for non-detects) unit must convert to the canonical unit",
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:04+00:00",
     "source": "10_prepare.py",
     "unit": "rows",
     "value": 0
   },
   "prepare.excl.E09_value": {
     "note": "A detected row needs a numeric value; a non-detect needs a numeric limit",
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:04+00:00",
     "source": "10_prepare.py",
     "unit": "rows",
     "value": 0
   },
   "prepare.excl.E10_positive": {
     "note": "Metals and conductance must be > 0 (log scale)",
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:04+00:00",
     "source": "10_prepare.py",
     "unit": "rows",
     "value": 471
   },
   "prepare.excl.E11_duplicates": {
     "note": "One result per org/site/date/time/constituent/fraction: keep the first ResultIdentifier",
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:04+00:00",
     "source": "10_prepare.py",
     "unit": "rows",
     "value": 1442
   },
   "prepare.excluded_rows": {
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:03+00:00",
     "source": "10_prepare.py",
     "value": 9071
   },
   "prepare.first_date": {
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:04+00:00",
     "source": "10_prepare.py",
     "value": "2005-01-10"
   },
   "prepare.flow_rows": {
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:03+00:00",
     "source": "10_prepare.py",
     "value": 4005
   },
   "prepare.last_date": {
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:04+00:00",
     "source": "10_prepare.py",
     "value": "2026-07-29"
   },
   "prepare.n_censored": {
     "n": 24558,
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:04+00:00",
     "source": "10_prepare.py",
     "value": 4345
   },
   "prepare.n_orgs": {
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:03+00:00",
     "source": "10_prepare.py",
     "value": 9
   },
   "prepare.n_sites_with_data": {
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:03+00:00",
     "source": "10_prepare.py",
     "value": 32
   },
   "prepare.qc_rows": {
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:03+00:00",
     "source": "10_prepare.py",
     "value": 602
   },
   "prepare.raw_rows": {
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:03+00:00",
     "source": "10_prepare.py",
     "value": 38236
   },
   "prepare.riverwatch_first": {
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:04+00:00",
     "source": "10_prepare.py",
     "value": "2005-01-10"
   },
   "prepare.riverwatch_last": {
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:04+00:00",
     "source": "10_prepare.py",
     "value": "2026-05-18"
   },
   "prepare.riverwatch_rows": {
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:04+00:00",
     "source": "10_prepare.py",
     "value": 16142
   },
   "prepare.sample_rows": {
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:03+00:00",
     "source": "10_prepare.py",
     "value": 24558
   },
   "prepare.share_censored": {
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:04+00:00",
     "source": "10_prepare.py",
     "value": 0.17692808860656406
   },
   "prepare.share_with_q": {
-    "recorded_at": "2026-10-09T21:49:39+00:00",
+    "recorded_at": "2026-10-10T01:00:03+00:00",
     "source": "10_prepare.py",
     "value": 1.0
   },
   "snapshot.api_version": {
-    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "recorded_at": "2026-10-10T01:00:02+00:00",
     "source": "00_snapshot.py",
-    "value": "unknown"
+    "value": "0.80.8"
   },
   "snapshot.daily_rows_max": {
-    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "recorded_at": "2026-10-10T01:00:02+00:00",
     "source": "00_snapshot.py",
     "unit": "rows",
     "value": 7951
   },
   "snapshot.daily_rows_min": {
-    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "recorded_at": "2026-10-10T01:00:02+00:00",
     "source": "00_snapshot.py",
     "unit": "rows",
     "value": 7947
   },
   "snapshot.daily_rows_total": {
-    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "recorded_at": "2026-10-10T01:00:02+00:00",
     "source": "00_snapshot.py",
     "unit": "rows",
     "value": 39751
   },
   "snapshot.download_date": {
-    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "recorded_at": "2026-10-10T01:00:02+00:00",
     "source": "00_snapshot.py",
     "value": "2026-10-09"
   },
   "snapshot.legacy_dv_status": {
-    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "recorded_at": "2026-10-10T01:00:02+00:00",
     "source": "00_snapshot.py",
     "value": 200
   },
   "snapshot.n_files": {
-    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "recorded_at": "2026-10-10T01:00:02+00:00",
     "source": "00_snapshot.py",
     "value": 7
   },
   "snapshot.n_gauges": {
-    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "recorded_at": "2026-10-10T01:00:02+00:00",
     "source": "00_snapshot.py",
     "value": 5
   },
   "snapshot.wqp_nwis_rows": {
-    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "recorded_at": "2026-10-10T01:00:02+00:00",
     "source": "00_snapshot.py",
     "unit": "rows",
     "value": 2568
   },
   "snapshot.wqp_result_mb": {
-    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "recorded_at": "2026-10-10T01:00:02+00:00",
     "source": "00_snapshot.py",
     "unit": "MB",
     "value": 21.3
   },
   "snapshot.wqp_result_rows": {
-    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "recorded_at": "2026-10-10T01:00:02+00:00",
     "source": "00_snapshot.py",
     "unit": "rows",
     "value": 38236
   },
   "snapshot.wqp_sites": {
-    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "recorded_at": "2026-10-10T01:00:02+00:00",
     "source": "00_snapshot.py",
     "value": 32
   },
   "snapshot.wqp_storet_rows": {
-    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "recorded_at": "2026-10-10T01:00:02+00:00",
     "source": "00_snapshot.py",
     "unit": "rows",
     "value": 35668
   },
   "snapshot.wqx3_missing_rows": {
-    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "recorded_at": "2026-10-10T01:00:02+00:00",
     "source": "00_snapshot.py",
     "unit": "rows",
     "value": 2568
   },
   "snapshot.wqx3_rows": {
     "note": "same query on the WQX3 fullPhysChem profile; equals the STORET count, i.e. no NWIS rows",
-    "recorded_at": "2026-10-09T21:49:38+00:00",
+    "recorded_at": "2026-10-10T01:00:02+00:00",
     "source": "00_snapshot.py",
     "unit": "rows",
     "value": 35668
+  },
+  "tests.n_files": {
+    "recorded_at": "2026-10-10T01:00:19+00:00",
+    "source": "75_tests_count.py",
+    "value": 6
+  },
+  "tests.n_tests": {
+    "note": "count of `def test_` functions in tests/",
+    "recorded_at": "2026-10-10T01:00:19+00:00",
+    "source": "75_tests_count.py",
+    "value": 17
   }
 }
