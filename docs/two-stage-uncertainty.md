@@ -3,7 +3,6 @@
 The original ITS intervals condition on the estimated concentration-discharge adjustment. This supplementary pairs-bootstrap sensitivity resamples occupied calendar blocks separately before and after the release, preserving all measurement/discharge/censoring pairs and their original timestamps. The plume-free primary window is used. Both C-Q and ITS models are refitted on every draw; nothing is substituted for non-detects. Original trend and seasonal design values remain tied to dates.
 
 ```sh
-uv run python scripts/10_prepare.py
 uv run python exploratory/two_stage_uncertainty.py --draws 400 --block-months 12 24
 ```
 
