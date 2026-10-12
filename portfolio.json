@@ -145,5 +145,17 @@
   ],
   "links": {
     "Repository": "https://github.com/ethannol/animas-gold-king"
-  }
+  },
+  "numeric_constants": {
+    "2016": "Predeclared post-window endpoint year, not measured timing of a fitted split.",
+    "2005": "Predeclared study/pre-window boundary year.",
+    "2025": "Predeclared post-window end year.",
+    "2010": "Alternative pre-window boundary year.",
+    "2013": "Alternative pre-window boundary year.",
+    "2015": "Historical intervention year; event dates are sourced in decisions log.",
+    "95": "Nominal confidence level fixed in the analysis specification.",
+    "0.05": "Predeclared raw significance threshold.",
+    "5": "Nominal FDR percentage specified before fitting."
+  },
+  "strict_numbers": true
 }
