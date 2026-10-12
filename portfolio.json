@@ -4,7 +4,7 @@
   "kind": "study",
   "status": "complete",
   "question": "After adjusting for discharge and season, did metal concentrations in Cement Creek and the Animas River change in a lasting way after the August 2015 Gold King Mine release, and can any change be told apart from the treatment plant that started two months later?",
-  "one_liner": "A pre-registered, flow-adjusted interrupted time series on Water Quality Portal and USGS discharge records, with a 27-fit sensitivity grid, a blind change-point search, an upstream control and false-discovery control across every site and metal.",
+  "one_liner": "A pre-registered, flow-adjusted interrupted time series on Water Quality Portal and USGS discharge records, with a {{grid.n_fits}}-fit sensitivity grid, a blind change-point search, an upstream control and false-discovery control across every site and metal.",
   "aim": "Test whether metal concentrations in Cement Creek and the Animas River changed lastingly after the 5 August 2015 Gold King Mine release, after adjustment for discharge and season, and whether any change can be distinguished from the Gladstone treatment plant that began treating the same discharge in October 2015.",
   "hypothesis": "Pre-registered rule for the headline series (dissolved zinc, Cement Creek): a lasting change is detected if the 95% interval for the level change excludes zero under the primary specification and under all three pre-period starts with the same sign. A change-point search blind to the release date, and an upstream control, are reported alongside. The interrupted time series alone cannot attribute a change to the release, because the release and the plant start are two months apart.",
   "conclusion": "No detectable lasting change under the primary specification. The estimate depends on the pre-period start and the post-period end: shorter pre-periods make a decrease significant, and a post-period ending in 2016 reverses its sign. Blind change-points do not fall at the release; on a cleaned series the strongest falls after the plant start. Across {{mult.n_estimable}} estimable site-by-metal cells, {{mult.n_bh_sig}} survive false-discovery control. Pooling organisations that began sampling after the release doubles the apparent decrease.",
@@ -152,7 +152,7 @@
     "verify": "pass"
   },
   "data": [
-    "Water Quality Portal, 9 organisations, Cement Creek and Animas River sites, 2005 to 2025",
+    "Water Quality Portal, {{coverage.n_orgs}} organisations, Cement Creek and Animas River sites, 2005 to 2025",
     "USGS Water Data API daily discharge for the paired gauges"
   ],
   "stack": [
