@@ -149,7 +149,8 @@
     "frozen": ".cairn/frozen.json",
     "tests": "tests.n_tests",
     "harness": "cairn",
-    "verify": "pass"
+    "verify": "pass",
+    "artifact": "reports/check-evidence.json"
   },
   "data": [
     "Water Quality Portal, {{coverage.n_orgs}} organisations, Cement Creek and Animas River sites, 2005 to 2025",
