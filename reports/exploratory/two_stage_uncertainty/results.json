@@ -1,0 +1,31 @@
+{
+  "exploratory": true,
+  "method": "stratified calendar-block pairs bootstrap; both stages refitted",
+  "conditional_primary": {
+    "point": -19.896685084999945,
+    "lo": -37.74121638884439,
+    "hi": 3.0624224920119625
+  },
+  "sensitivity": [
+    {
+      "block_months": 12,
+      "n_draws": 400,
+      "n_valid": 400,
+      "status": "exploratory interval",
+      "percentile_lo": -42.169817481734704,
+      "percentile_hi": 8.748492777033238
+    },
+    {
+      "block_months": 24,
+      "n_draws": 400,
+      "n_valid": 400,
+      "status": "exploratory interval",
+      "percentile_lo": -43.255043071151185,
+      "percentile_hi": 22.145454464326214
+    }
+  ],
+  "seed": 20261012,
+  "source_revision": "22c026b2edc3e34134b5b38200df4ab024c68b86",
+  "limitations": "occupied blocks resampled; dates retained; few independent blocks; no causal attribution",
+  "baseline_unchanged": true
+}

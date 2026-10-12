@@ -40,6 +40,24 @@
       "label": "Sensitivity grid fits",
       "value": "grid.n_fits",
       "note": "range of level change from the grid shown below"
+    },
+    {
+      "label": "Exploratory full two-stage interval, 12-month blocks",
+      "value": "its.headline.level_change_pct",
+      "fmt": "pct_signed",
+      "lo": "uncertainty.block12.lo",
+      "hi": "uncertainty.block12.hi",
+      "spread_kind": "exploratory percentile interval",
+      "note": "Both stages refitted; {{uncertainty.block12.n_valid}} / {{uncertainty.block12.n_draws}} draws valid. Original primary interval unchanged."
+    },
+    {
+      "label": "Exploratory full two-stage interval, 24-month blocks",
+      "value": "its.headline.level_change_pct",
+      "fmt": "pct_signed",
+      "lo": "uncertainty.block24.lo",
+      "hi": "uncertainty.block24.hi",
+      "spread_kind": "exploratory percentile interval",
+      "note": "Both stages refitted; {{uncertainty.block24.n_valid}} / {{uncertainty.block24.n_draws}} draws valid. Original primary interval unchanged."
     }
   ],
   "finding": [
@@ -121,6 +139,10 @@
     {
       "title": "Exploratory two-stage uncertainty",
       "path": "docs/two-stage-uncertainty.md"
+    },
+    {
+      "title": "Recorded full two-stage uncertainty results",
+      "path": "docs/uncertainty-results.md"
     }
   ],
   "verification": {
@@ -155,7 +177,51 @@
     "2015": "Historical intervention year; event dates are sourced in decisions log.",
     "95": "Nominal confidence level fixed in the analysis specification.",
     "0.05": "Predeclared raw significance threshold.",
-    "5": "Nominal FDR percentage specified before fitting."
+    "5": "Nominal FDR percentage specified before fitting.",
+    "12": "Exploratory calendar-block length in months, a chosen method setting.",
+    "24": "Exploratory calendar-block length in months, a chosen method setting."
   },
-  "strict_numbers": true
+  "strict_numbers": true,
+  "sources": {
+    "uncertainty.block12.lo": {
+      "source": "json_file",
+      "path": "reports/exploratory/two_stage_uncertainty/summary.json",
+      "key": "block12.lo"
+    },
+    "uncertainty.block12.hi": {
+      "source": "json_file",
+      "path": "reports/exploratory/two_stage_uncertainty/summary.json",
+      "key": "block12.hi"
+    },
+    "uncertainty.block12.n_valid": {
+      "source": "json_file",
+      "path": "reports/exploratory/two_stage_uncertainty/summary.json",
+      "key": "block12.n_valid"
+    },
+    "uncertainty.block12.n_draws": {
+      "source": "json_file",
+      "path": "reports/exploratory/two_stage_uncertainty/summary.json",
+      "key": "block12.n_draws"
+    },
+    "uncertainty.block24.lo": {
+      "source": "json_file",
+      "path": "reports/exploratory/two_stage_uncertainty/summary.json",
+      "key": "block24.lo"
+    },
+    "uncertainty.block24.hi": {
+      "source": "json_file",
+      "path": "reports/exploratory/two_stage_uncertainty/summary.json",
+      "key": "block24.hi"
+    },
+    "uncertainty.block24.n_valid": {
+      "source": "json_file",
+      "path": "reports/exploratory/two_stage_uncertainty/summary.json",
+      "key": "block24.n_valid"
+    },
+    "uncertainty.block24.n_draws": {
+      "source": "json_file",
+      "path": "reports/exploratory/two_stage_uncertainty/summary.json",
+      "key": "block24.n_draws"
+    }
+  }
 }

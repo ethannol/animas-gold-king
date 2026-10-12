@@ -8,3 +8,5 @@ uv run python exploratory/two_stage_uncertainty.py --draws 400 --block-months 12
 ```
 
 Run on the analysis machine only. Separate outputs in `reports/exploratory/two_stage_uncertainty/` include every draw, convergence failures, percentile intervals, seed and source revision. A sensitivity arm abstains unless at least 90% of draws and at least 100 draws converge. This is a calendar-block pairs sensitivity, not a claim of calibrated coverage or causal attribution: occupied blocks and few independent long blocks constrain interpretation. Block lengths were chosen after the preregistration, and the frozen primary point, intervals and verdict remain unchanged.
+
+[Recorded supplementary results](uncertainty-results.md). Regenerate its table with `uv run python exploratory/render_uncertainty.py`; no model fits occur in that command.
