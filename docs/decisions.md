@@ -168,3 +168,8 @@ search compared against both the release and the plant start, and an upstream co
   remaining warnings, if any, are reviewed in the verify output rather than suppressed.
 - The test count in the README is recorded by `scripts/75_tests_count.py` from the test
   files, so even that number is not typed.
+
+
+## 2026-10-12: conditional intervals and exploratory full two-stage sensitivity
+
+Made the existing omitted-first-stage-error limitation visible beside the primary headline. Added calendar-block pairs resampling separately before and after the release, preserving original dates and measurement/discharge/censoring pairs, with both stages refitted. Block lengths and draw budget are post-registration exploratory settings. This is a sensitivity, not a calibrated-coverage or causal claim. The recorded output includes failed draws and an explicit convergence-based abstention rule. Primary results and verdict remain unchanged. Added a static sourced-event/sampling timeline and separate generated supplementary results document.

@@ -4,10 +4,10 @@
   "kind": "study",
   "status": "complete",
   "question": "After adjusting for discharge and season, did metal concentrations in Cement Creek and the Animas River change in a lasting way after the August 2015 Gold King Mine release, and can any change be told apart from the treatment plant that started two months later?",
-  "one_liner": "A pre-registered, flow-adjusted interrupted time series on Water Quality Portal and USGS discharge records, with a 27-fit sensitivity grid, a blind change-point search, an upstream control and false-discovery control across every site and metal.",
+  "one_liner": "A pre-registered, flow-adjusted interrupted time series on Water Quality Portal and USGS discharge records, with a {{grid.n_fits}}-fit sensitivity grid, a blind change-point search, an upstream control and false-discovery control across every site and metal.",
   "aim": "Test whether metal concentrations in Cement Creek and the Animas River changed lastingly after the 5 August 2015 Gold King Mine release, after adjustment for discharge and season, and whether any change can be distinguished from the Gladstone treatment plant that began treating the same discharge in October 2015.",
   "hypothesis": "Pre-registered rule for the headline series (dissolved zinc, Cement Creek): a lasting change is detected if the 95% interval for the level change excludes zero under the primary specification and under all three pre-period starts with the same sign. A change-point search blind to the release date, and an upstream control, are reported alongside. The interrupted time series alone cannot attribute a change to the release, because the release and the plant start are two months apart.",
-  "conclusion": "No detectable lasting change under the primary specification. The estimate depends on the pre-period start and the post-period end: shorter pre-periods make a decrease significant, and a post-period ending in 2016 reverses its sign. Blind change-points do not fall at the release; on a cleaned series the strongest falls after the plant start. Across 52 estimable site-by-metal cells, none survives false-discovery control. Pooling organisations that began sampling after the release doubles the apparent decrease.",
+  "conclusion": "No detectable lasting change under the primary specification. The estimate depends on the pre-period start and the post-period end: shorter pre-periods make a decrease significant, and a post-period ending in 2016 reverses its sign. Blind change-points do not fall at the release; on a cleaned series the strongest falls after the plant start. Across {{mult.n_estimable}} estimable site-by-metal cells, {{mult.n_bh_sig}} survive false-discovery control. Pooling organisations that began sampling after the release doubles the apparent decrease.",
   "ledger": {
     "type": "cairn",
     "path": "artifacts/numbers.json"
@@ -19,7 +19,8 @@
       "fmt": "pct_signed",
       "lo": "its.headline.level_change_pct_lo",
       "hi": "its.headline.level_change_pct_hi",
-      "spread_kind": "95% interval"
+      "spread_kind": "95% interval",
+      "note": "Conditional on fitted flow adjustment; omits first-stage estimation error."
     },
     {
       "label": "Pre-registered verdict",
@@ -28,7 +29,7 @@
     {
       "label": "Cells surviving false-discovery control",
       "value": "mult.n_bh_sig",
-      "note": "of {{mult.n_estimable}} estimable; 7 raw p < 0.05"
+      "note": "of {{mult.n_estimable}} estimable; {{mult.n_raw_sig}} raw p < {{const.alpha:.2f}}"
     },
     {
       "label": "Strongest blind change-point, months from the release",
@@ -39,12 +40,30 @@
       "label": "Sensitivity grid fits",
       "value": "grid.n_fits",
       "note": "range of level change from the grid shown below"
+    },
+    {
+      "label": "Exploratory full two-stage interval, 12-month blocks",
+      "value": "its.headline.level_change_pct",
+      "fmt": "pct_signed",
+      "lo": "uncertainty.block12.lo",
+      "hi": "uncertainty.block12.hi",
+      "spread_kind": "exploratory percentile interval",
+      "note": "Both stages refitted; {{uncertainty.block12.n_valid}} / {{uncertainty.block12.n_draws}} draws valid. Original primary interval unchanged."
+    },
+    {
+      "label": "Exploratory full two-stage interval, 24-month blocks",
+      "value": "its.headline.level_change_pct",
+      "fmt": "pct_signed",
+      "lo": "uncertainty.block24.lo",
+      "hi": "uncertainty.block24.hi",
+      "spread_kind": "exploratory percentile interval",
+      "note": "Both stages refitted; {{uncertainty.block24.n_valid}} / {{uncertainty.block24.n_draws}} draws valid. Original primary interval unchanged."
     }
   ],
   "finding": [
     "The headline cell is dissolved zinc in Cement Creek, {{its.headline.n}} monthly samples from one organisation between 2005 and 2025, flow-adjusted with a concentration-discharge regression and seasonal harmonics. With the pre-period starting in 2005, the level change at the release is {{its.headline.level_change_pct:pct_signed}} with a 95 percent interval from {{its.headline.level_change_pct_lo:.0f}} to {{its.headline.level_change_pct_hi:+.0f}} percent and p = {{its.headline.level_change_p:.2f}}. The pre-registered verdict is: {{its.headline.verdict}}.",
     "The verdict depends on the analyst's choices. The pre-period carries a rising trend of {{its.headline.pre_slope_pct_per_yr:.1f}} percent a year that the counterfactual extrapolates; starting it in 2010 or 2013 makes the decrease significant, and ending the post-period in 2016 flips the sign. Across {{grid.n_fits}} fits the level change ranges from {{grid.pct_min:.0f}} to {{grid.pct_max:+.0f}} percent and {{grid.n_ci_excludes_zero}} intervals exclude zero.",
-    "A change-point search that does not know the release date puts the strongest split at {{cp.headline.strongest_month}}, {{cp.headline.strongest_rel_release_months}} months from the release. On a series with three coding artefacts removed, the strongest split is {{cp.explore.strongest_month}}, {{cp.explore.strongest_rel_release_months}} months after the release and {{cp.explore.strongest_rel_plant_months}} months after the Gladstone treatment plant started. Across {{mult.n_cells}} site-by-metal-by-fraction cells, {{mult.n_estimable}} are estimable, {{mult.n_raw_sig}} have raw p below 0.05 and {{mult.n_bh_sig}} survive false-discovery control. Pooling the organisations that began sampling after the spill gives {{explore.pooled.level_change_pct:.0f}} percent, double the single-organisation estimate."
+    "A change-point search that does not know the release date puts the strongest split at {{cp.headline.strongest_month}}, {{cp.headline.strongest_rel_release_months}} months from the release. On a series with {{cp.explore.n_rows_removed}} coding artefacts removed, the strongest split is {{cp.explore.strongest_month}}, {{cp.explore.strongest_rel_release_months}} months after the release and {{cp.explore.strongest_rel_plant_months}} months after the Gladstone treatment plant started. Across {{mult.n_cells}} site-by-metal-by-fraction cells, {{mult.n_estimable}} are estimable, {{mult.n_raw_sig}} have raw p below 0.05 and {{mult.n_bh_sig}} survive false-discovery control. Pooling the organisations that began sampling after the spill gives {{explore.pooled.level_change_pct:.0f}} percent, double the single-organisation estimate."
   ],
   "traps": [
     {
@@ -61,11 +80,11 @@
     },
     {
       "id": "censoring",
-      "how": "Non-detects enter a Tobit regression as bounds; 12 cells were ruled not estimable by the pre-registered censoring rule rather than filled."
+      "how": "Non-detects enter a Tobit regression as bounds; {{mult.n_censoring_excluded}} cells were ruled not estimable by the pre-registered censoring rule rather than filled."
     },
     {
       "id": "composition",
-      "how": "The upstream control's own change was driven by three zero-coded non-detects; a difference-in-differences against it is reported alongside the single-site estimate."
+      "how": "The upstream control's own change was driven by {{explore.clean.control.n_rows_removed}} zero-coded non-detects; a difference-in-differences against it is reported alongside the single-site estimate."
     }
   ],
   "figures": [
@@ -97,7 +116,8 @@
   "not_claimed": [
     "No attribution of any change to the release; the release and the treatment-plant start are two months apart, inside the resolution of a monthly series.",
     "No health, ecological, compliance or legal conclusion.",
-    "The cleaned-series result with an interval excluding zero is exploratory, not confirmatory."
+    "The cleaned-series result with an interval excluding zero is exploratory, not confirmatory.",
+    "Headline intervals omit first-stage flow-adjustment estimation error; the full two-stage sensitivity is exploratory."
   ],
   "documents": [
     {
@@ -111,16 +131,29 @@
     {
       "title": "Decisions log, including the confounder timeline with sources",
       "path": "docs/decisions.md"
+    },
+    {
+      "title": "Release, treatment and sampling timeline",
+      "path": "docs/timeline.md"
+    },
+    {
+      "title": "Exploratory two-stage uncertainty",
+      "path": "docs/two-stage-uncertainty.md"
+    },
+    {
+      "title": "Recorded full two-stage uncertainty results",
+      "path": "docs/uncertainty-results.md"
     }
   ],
   "verification": {
     "frozen": ".cairn/frozen.json",
     "tests": "tests.n_tests",
     "harness": "cairn",
-    "verify": "pass"
+    "verify": "pass",
+    "artifact": "reports/check-evidence.json"
   },
   "data": [
-    "Water Quality Portal, 9 organisations, Cement Creek and Animas River sites, 2005 to 2025",
+    "Water Quality Portal, {{coverage.n_orgs}} organisations, Cement Creek and Animas River sites, 2005 to 2025",
     "USGS Water Data API daily discharge for the paired gauges"
   ],
   "stack": [
@@ -135,5 +168,61 @@
   ],
   "links": {
     "Repository": "https://github.com/ethannol/animas-gold-king"
+  },
+  "numeric_constants": {
+    "2016": "Predeclared post-window endpoint year, not measured timing of a fitted split.",
+    "2005": "Predeclared study/pre-window boundary year.",
+    "2025": "Predeclared post-window end year.",
+    "2010": "Alternative pre-window boundary year.",
+    "2013": "Alternative pre-window boundary year.",
+    "2015": "Historical intervention year; event dates are sourced in decisions log.",
+    "95": "Nominal confidence level fixed in the analysis specification.",
+    "0.05": "Predeclared raw significance threshold.",
+    "5": "Nominal FDR percentage specified before fitting.",
+    "12": "Exploratory calendar-block length in months, a chosen method setting.",
+    "24": "Exploratory calendar-block length in months, a chosen method setting."
+  },
+  "strict_numbers": true,
+  "sources": {
+    "uncertainty.block12.lo": {
+      "source": "json_file",
+      "path": "reports/exploratory/two_stage_uncertainty/summary.json",
+      "key": "block12.lo"
+    },
+    "uncertainty.block12.hi": {
+      "source": "json_file",
+      "path": "reports/exploratory/two_stage_uncertainty/summary.json",
+      "key": "block12.hi"
+    },
+    "uncertainty.block12.n_valid": {
+      "source": "json_file",
+      "path": "reports/exploratory/two_stage_uncertainty/summary.json",
+      "key": "block12.n_valid"
+    },
+    "uncertainty.block12.n_draws": {
+      "source": "json_file",
+      "path": "reports/exploratory/two_stage_uncertainty/summary.json",
+      "key": "block12.n_draws"
+    },
+    "uncertainty.block24.lo": {
+      "source": "json_file",
+      "path": "reports/exploratory/two_stage_uncertainty/summary.json",
+      "key": "block24.lo"
+    },
+    "uncertainty.block24.hi": {
+      "source": "json_file",
+      "path": "reports/exploratory/two_stage_uncertainty/summary.json",
+      "key": "block24.hi"
+    },
+    "uncertainty.block24.n_valid": {
+      "source": "json_file",
+      "path": "reports/exploratory/two_stage_uncertainty/summary.json",
+      "key": "block24.n_valid"
+    },
+    "uncertainty.block24.n_draws": {
+      "source": "json_file",
+      "path": "reports/exploratory/two_stage_uncertainty/summary.json",
+      "key": "block24.n_draws"
+    }
   }
 }
