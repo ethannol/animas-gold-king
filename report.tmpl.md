@@ -274,3 +274,8 @@ mostly non-significant decline at all four reaches including the control.
 
 See `docs/decisions.md` for the endpoint history, the verified confounder timeline with
 sources, every data rule, and what cairn blocked.
+
+
+## Supplementary uncertainty and timeline
+
+Headline intervals are conditional on the fitted first-stage concentration-discharge adjustment; they omit its estimation error. An [exploratory full two-stage calendar-block sensitivity](docs/two-stage-uncertainty.md) refits both stages without replacing the frozen primary results. The [release, treatment and sampling timeline](docs/timeline.md) explains why attribution remains unresolved.

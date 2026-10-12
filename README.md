@@ -114,3 +114,8 @@ findings. No language model is called by the pipeline.
 
 MIT for the code. USGS data are public domain; partner data are as published through the
 Water Quality Portal.
+
+
+## Supplementary uncertainty and timeline
+
+Headline intervals are conditional on the fitted first-stage concentration-discharge adjustment; they omit its estimation error. An [exploratory full two-stage calendar-block sensitivity](docs/two-stage-uncertainty.md) refits both stages without replacing the frozen primary results. The [release, treatment and sampling timeline](docs/timeline.md) explains why attribution remains unresolved.
