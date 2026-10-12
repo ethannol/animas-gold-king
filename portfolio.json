@@ -1,0 +1,50 @@
+{
+  "slug": "animas-gold-king",
+  "title": "Animas River after Gold King",
+  "kind": "study",
+  "status": "complete",
+  "question": "After adjusting for discharge and season, did metal concentrations in Cement Creek and the Animas River change in a lasting way after the August 2015 Gold King Mine release, and can any change be told apart from the treatment plant that started two months later?",
+  "one_liner": "A pre-registered, flow-adjusted interrupted time series on Water Quality Portal and USGS discharge records, with a 27-fit sensitivity grid, a blind change-point search, an upstream control and false-discovery control across every site and metal.",
+  "ledger": {"type": "cairn", "path": "artifacts/numbers.json"},
+  "headline": [
+    {"label": "Level change at the release, dissolved zinc, Cement Creek", "value": "its.headline.level_change_pct", "fmt": "pct_signed", "lo": "its.headline.level_change_pct_lo", "hi": "its.headline.level_change_pct_hi", "spread_kind": "95% interval"},
+    {"label": "Pre-registered verdict", "value": "its.headline.verdict"},
+    {"label": "Cells surviving false-discovery control", "value": "mult.n_bh_sig", "note": "of {{mult.n_estimable}} estimable; 7 raw p < 0.05"},
+    {"label": "Strongest blind change-point, months from the release", "value": "cp.headline.strongest_rel_release_months", "fmt": "+d"},
+    {"label": "Sensitivity grid fits", "value": "grid.n_fits", "note": "range of level change from the grid shown below"}
+  ],
+  "finding": [
+    "The headline cell is dissolved zinc in Cement Creek, {{its.headline.n}} monthly samples from one organisation between 2005 and 2025, flow-adjusted with a concentration-discharge regression and seasonal harmonics. With the pre-period starting in 2005, the level change at the release is {{its.headline.level_change_pct:pct_signed}} with a 95 percent interval from {{its.headline.level_change_pct_lo:.0f}} to {{its.headline.level_change_pct_hi:+.0f}} percent and p = {{its.headline.level_change_p:.2f}}. The pre-registered verdict is: {{its.headline.verdict}}.",
+    "The verdict depends on the analyst's choices. The pre-period carries a rising trend of {{its.headline.pre_slope_pct_per_yr:.1f}} percent a year that the counterfactual extrapolates; starting it in 2010 or 2013 makes the decrease significant, and ending the post-period in 2016 flips the sign. Across {{grid.n_fits}} fits the level change ranges from {{grid.pct_min:.0f}} to {{grid.pct_max:+.0f}} percent and {{grid.n_ci_excludes_zero}} intervals exclude zero.",
+    "A change-point search that does not know the release date puts the strongest split at {{cp.headline.strongest_month}}, {{cp.headline.strongest_rel_release_months}} months from the release. On a series with three coding artefacts removed, the strongest split is {{cp.explore.strongest_month}}, {{cp.explore.strongest_rel_release_months}} months after the release and {{cp.explore.strongest_rel_plant_months}} months after the Gladstone treatment plant started. Across {{mult.n_cells}} site-by-metal-by-fraction cells, {{mult.n_estimable}} are estimable, {{mult.n_raw_sig}} have raw p below 0.05 and {{mult.n_bh_sig}} survive false-discovery control. Pooling the organisations that began sampling after the spill gives {{explore.pooled.level_change_pct:.0f}} percent, double the single-organisation estimate."
+  ],
+  "traps": [
+    {"id": "analyst-choices", "how": "Pre-period start, post-period end and plume window move the level change from {{grid.pct_min:.0f}} to {{grid.pct_max:+.0f}} percent across {{grid.n_fits}} fits; the primary specification was frozen before fitting."},
+    {"id": "multiplicity", "how": "{{mult.n_raw_sig}} of {{mult.n_estimable}} cells have raw p below 0.05 and none survive Benjamini-Hochberg at 5 percent FDR."},
+    {"id": "sampling-intensity", "how": "Sampling went from {{coverage.events_per_year_pre:.0f}} to {{coverage.events_per_year_post:.0f}} events a year after the plant started; pooling the new organisations doubles the apparent decrease, so one organisation is held constant across the release."},
+    {"id": "censoring", "how": "Non-detects enter a Tobit regression as bounds; 12 cells were ruled not estimable by the pre-registered censoring rule rather than filled."},
+    {"id": "composition", "how": "The upstream control's own change was driven by three zero-coded non-detects; a difference-in-differences against it is reported alongside the single-site estimate."}
+  ],
+  "figures": [
+    {"path": "reports/figures/sensitivity_grid.png", "caption": "Level change in flow-adjusted dissolved zinc at Cement Creek under every combination of pre-period start, plume window and post-period end. Starred cells have intervals excluding zero."},
+    {"path": "reports/figures/its_headline.png", "caption": "The interrupted time series on flow-adjusted residuals, with the release, the treatment-plant start and the extrapolated pre-period trend."},
+    {"path": "reports/figures/changepoints_headline_cleaned.png", "caption": "Blind change-points on the cleaned series; the strongest lands after the treatment plant started, not at the release."},
+    {"path": "reports/figures/multiplicity_grid.png", "caption": "Every site, metal and fraction: point estimate, interval, and whether it survives false-discovery control."},
+    {"path": "reports/figures/cq_headline.png", "caption": "Concentration against discharge before and after the release."},
+    {"path": "reports/figures/detection_limits.png", "caption": "Reporting limits over time by organisation and method."}
+  ],
+  "not_claimed": [
+    "No attribution of any change to the release; the release and the treatment-plant start are two months apart, inside the resolution of a monthly series.",
+    "No health, ecological, compliance or legal conclusion.",
+    "The cleaned-series result with an interval excluding zero is exploratory, not confirmatory."
+  ],
+  "documents": [
+    {"title": "Five-minute walkthrough", "path": "docs/walkthrough.md"},
+    {"title": "Pre-registration (frozen before fitting)", "path": "docs/prereg.md"},
+    {"title": "Decisions log, including the confounder timeline with sources", "path": "docs/decisions.md"}
+  ],
+  "verification": {"frozen": ".cairn/frozen.json", "tests": "tests.n_tests", "harness": "cairn", "verify": "pass"},
+  "data": ["Water Quality Portal, 9 organisations, Cement Creek and Animas River sites, 2005 to 2025", "USGS Water Data API daily discharge for the paired gauges"],
+  "stack": ["concentration-discharge regression", "interrupted time series", "Tobit censoring", "Newey-West errors", "PELT change-points", "difference-in-differences", "Benjamini-Hochberg", "cairn ledger"],
+  "links": {"Repository": "https://github.com/ethannol/animas-gold-king"}
+}
