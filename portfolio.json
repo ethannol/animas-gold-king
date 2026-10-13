@@ -3,6 +3,7 @@
   "title": "Animas River after Gold King",
   "kind": "study",
   "status": "complete",
+  "story": "docs/story.md",
   "question": "After adjusting for discharge and season, did metal concentrations in Cement Creek and the Animas River change in a lasting way after the August 2015 Gold King Mine release, and can any change be told apart from the treatment plant that started two months later?",
   "one_liner": "A pre-registered, flow-adjusted interrupted time series on Water Quality Portal and USGS discharge records, with a {{grid.n_fits}}-fit sensitivity grid, a blind change-point search, an upstream control and false-discovery control across every site and metal.",
   "aim": "Test whether metal concentrations in Cement Creek and the Animas River changed lastingly after the 5 August 2015 Gold King Mine release, after adjustment for discharge and season, and whether any change can be distinguished from the Gladstone treatment plant that began treating the same discharge in October 2015.",
@@ -206,6 +207,7 @@
   },
   "numeric_constants": {
     "2016": "Predeclared post-window endpoint year, not measured timing of a fitted split.",
+    "2018": "Predeclared alternative post-window endpoint year.",
     "2005": "Predeclared study/pre-window boundary year.",
     "2025": "Predeclared post-window end year.",
     "2010": "Alternative pre-window boundary year.",
