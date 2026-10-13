@@ -8,6 +8,19 @@
   "aim": "Test whether metal concentrations in Cement Creek and the Animas River changed lastingly after the 5 August 2015 Gold King Mine release, after adjustment for discharge and season, and whether any change can be distinguished from the Gladstone treatment plant that began treating the same discharge in October 2015.",
   "hypothesis": "Pre-registered rule for the headline series (dissolved zinc, Cement Creek): a lasting change is detected if the 95% interval for the level change excludes zero under the primary specification and under all three pre-period starts with the same sign. A change-point search blind to the release date, and an upstream control, are reported alongside. The interrupted time series alone cannot attribute a change to the release, because the release and the plant start are two months apart.",
   "conclusion": "No detectable lasting change under the primary specification. The estimate depends on the pre-period start and the post-period end: shorter pre-periods make a decrease significant, and a post-period ending in 2016 reverses its sign. Blind change-points do not fall at the release; on a cleaned series the strongest falls after the plant start. Across {{mult.n_estimable}} estimable site-by-metal cells, {{mult.n_bh_sig}} survive false-discovery control. Pooling organisations that began sampling after the release doubles the apparent decrease.",
+  "summary": {
+    "question": "Did the Gold King Mine spill leave a lasting change in river metals once river flow and season are accounted for?",
+    "techniques": [
+      "Concentration-discharge regression",
+      "Interrupted time series",
+      "Censored (Tobit) regression",
+      "Autocorrelation-robust standard errors",
+      "Blind change-point detection",
+      "Difference-in-differences against an upstream control",
+      "False-discovery control across sites and metals"
+    ],
+    "result": "No detectable lasting change under the plan. The answer flips with the choice of comparison window, and the strongest break in the record falls after the treatment plant started, not at the spill."
+  },
   "ledger": {
     "type": "cairn",
     "path": "artifacts/numbers.json"
