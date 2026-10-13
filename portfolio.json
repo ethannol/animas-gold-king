@@ -19,7 +19,29 @@
       "Difference-in-differences against an upstream control",
       "False-discovery control across sites and metals"
     ],
-    "result": "No detectable lasting change under the plan. The answer flips with the choice of comparison window, and the strongest break in the record falls after the treatment plant started, not at the spill."
+    "result": "No detectable lasting change under the plan. The answer flips with the choice of comparison window, and the strongest break in the record falls after the treatment plant started, not at the spill.",
+    "pitfalls": [
+      {
+        "id": "analyst-choices",
+        "text": "The estimated change ranges from {{grid.pct_min:.0f}} to {{grid.pct_max:+.0f}} percent across {{grid.n_fits}} defensible specifications"
+      },
+      {
+        "id": "multiplicity",
+        "text": "{{mult.n_raw_sig}} of {{mult.n_estimable}} site-by-metal cells were significant on their own; {{mult.n_bh_sig}} survived false-discovery control"
+      },
+      {
+        "id": "sampling-intensity",
+        "text": "Sampling rose from {{coverage.events_per_year_pre:.0f}} to {{coverage.events_per_year_post:.0f}} events a year after the spill; pooling the new organisations doubles the apparent decrease"
+      },
+      {
+        "id": "censoring",
+        "text": "{{mult.n_censoring_excluded}} cells had too many non-detects to estimate and were reported as not estimable rather than filled"
+      },
+      {
+        "id": "composition",
+        "text": "The upstream control's own change was driven by {{explore.clean.control.n_rows_removed}} zero-coded non-detects"
+      }
+    ]
   },
   "ledger": {
     "type": "cairn",
