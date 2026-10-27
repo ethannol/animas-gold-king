@@ -4,9 +4,27 @@ Did the 5 August 2015 Gold King Mine release leave a lasting, flow-adjusted sign
 Cement Creek and the Animas River, and can any change be told apart from the Gladstone
 treatment plant that started treating the same discharge two months later? A
 pre-registered interrupted time series on public USGS and Water Quality Portal data,
-built and verified under the [cairn](../cairn) harness.
+built and verified under the [cairn](https://github.com/ethannol/cairn) harness.
 
-## Main findings (every number here is rendered from `artifacts/numbers.json`)
+## What the analysis shows
+
+The primary analysis does not detect a lasting change in dissolved zinc at Cement
+Creek after the release. The result changes with the analysis window, and the
+nearby treatment plant started too soon afterward to separate its effect from the
+spill in a monthly series.
+
+This study works through flow adjustment, censored measurements, interrupted time
+series, and sensitivity to the comparison period.
+
+[Read the report](reports/report.md) · [Five-minute walkthrough](docs/walkthrough.md) · [Reproduce the analysis](#setup)
+
+![Sensitivity of the estimated change to the comparison period](reports/figures/sensitivity_grid.png)
+
+<details>
+<summary>Detailed findings and estimates</summary>
+
+All estimates below are rendered from the recorded results in `artifacts/numbers.json`.
+
 
 - Headline cell, dissolved zinc in Cement Creek (Colorado River Watch monthly samples,
   245 samples 2005 to 2025, USGS gauge `09358550` discharge): flow-adjusted
@@ -43,9 +61,9 @@ built and verified under the [cairn](../cairn) harness.
   -40 percent, about double the single-organisation
   estimate; the design uses one organisation across the release for that reason.
 
-Full report: `reports/report.md`. Five-minute script: `docs/walkthrough.md`.
+Read the [full report](reports/report.md) or the [five-minute walkthrough](docs/walkthrough.md).
 
-![Sensitivity grid](reports/figures/sensitivity_grid.png)
+</details>
 
 ## What is not claimed
 
@@ -56,13 +74,20 @@ Stage-two intervals do not carry stage-one estimation error.
 
 ## Setup
 
-Requires [uv](https://docs.astral.sh/uv/) and the cairn checkout beside this directory
-(`../cairn`, pinned to commit `a184e0732989373856039dea2919ccd96a88e8b1`; cairn is an
-editable path dependency in `pyproject.toml`). Python 3.12 is pinned in `.python-version`
-and `uv.lock`.
+Requires Python 3.12 and [uv](https://docs.astral.sh/uv/). From the cloned repository:
 
 ```bash
-uv sync --extra dev          # environment, including cairn from ../cairn
+python3 scripts/bootstrap.py
+```
+
+This installs dependencies from the lockfile and checks out Cairn at the study's
+recorded revision (`a184e0732989373856039dea2919ccd96a88e8b1`) in `../cairn-animas-baseline`.
+It leaves existing checkouts untouched and refuses a baseline folder with a different
+revision or uncommitted changes. The initial installation needs network access.
+
+To reproduce the analysis after installation:
+
+```bash
 uv run pytest                # focused tests of every model component
 uv run cairn run             # scripts/00..80 in order, offline, from the committed snapshot
 uv run cairn verify          # frozen plan, checks, lint, placeholders, clean rerun
@@ -70,7 +95,7 @@ uv run cairn render          # reports/report.md from report.tmpl.md and the led
 uv run python scripts/download.py   # ONLY to refresh the snapshot (network); re-freeze after
 ```
 
-Everything deterministic runs from a fresh checkout without network access.
+After installation, the analysis runs offline from the committed data snapshot.
 
 ## Data provenance
 
